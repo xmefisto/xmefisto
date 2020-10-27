@@ -1,0 +1,634 @@
+/**
+ */
+package xmiml.fragment.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.Activity;
+import xmiml.fragment.ActivityType;
+import xmiml.fragment.Artifact;
+import xmiml.fragment.FragmentFactory;
+import xmiml.fragment.FragmentPackage;
+import xmiml.fragment.MethodFragment;
+import xmiml.fragment.Role;
+import xmiml.fragment.Tool;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class FragmentPackageImpl extends EPackageImpl implements FragmentPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass artifactEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodFragmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum activityTypeEEnum = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.fragment.FragmentPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private FragmentPackageImpl() {
+		super(eNS_URI, FragmentFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link FragmentPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static FragmentPackage init() {
+		if (isInited) return (FragmentPackage)EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredFragmentPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		FragmentPackageImpl theFragmentPackage = registeredFragmentPackage instanceof FragmentPackageImpl ? (FragmentPackageImpl)registeredFragmentPackage : new FragmentPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theFragmentPackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theFragmentPackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theFragmentPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(FragmentPackage.eNS_URI, theFragmentPackage);
+		return theFragmentPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArtifact() {
+		return artifactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_SubArtifact() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_SuperArtifact() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_InputTo() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_OutputFrom() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_ReferencedSubArtifact() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArtifact_ReferencedSuperArtifact() {
+		return (EReference)artifactEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getActivity() {
+		return activityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Input() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Role() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Tool() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_SubActivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_SuperActivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Output() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_ReferencedSubActivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_ReferencedSuperActivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Successor() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Predecessor() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getActivity_Type() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMethodFragment() {
+		return methodFragmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodFragment_ProjectIndependentGUID() {
+		return (EAttribute)methodFragmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodFragment_ProjectSpecificGuid() {
+		return (EAttribute)methodFragmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodFragment_Preparationphasefragment() {
+		return (EReference)methodFragmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodFragment_Transformationphasefragment() {
+		return (EReference)methodFragmentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTool() {
+		return toolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRole() {
+		return roleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getActivityType() {
+		return activityTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FragmentFactory getFragmentFactory() {
+		return (FragmentFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		artifactEClass = createEClass(ARTIFACT);
+		createEReference(artifactEClass, ARTIFACT__SUB_ARTIFACT);
+		createEReference(artifactEClass, ARTIFACT__SUPER_ARTIFACT);
+		createEReference(artifactEClass, ARTIFACT__INPUT_TO);
+		createEReference(artifactEClass, ARTIFACT__OUTPUT_FROM);
+		createEReference(artifactEClass, ARTIFACT__REFERENCED_SUB_ARTIFACT);
+		createEReference(artifactEClass, ARTIFACT__REFERENCED_SUPER_ARTIFACT);
+
+		activityEClass = createEClass(ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__INPUT);
+		createEReference(activityEClass, ACTIVITY__ROLE);
+		createEReference(activityEClass, ACTIVITY__TOOL);
+		createEReference(activityEClass, ACTIVITY__SUB_ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__SUPER_ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__OUTPUT);
+		createEReference(activityEClass, ACTIVITY__REFERENCED_SUB_ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__REFERENCED_SUPER_ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__SUCCESSOR);
+		createEReference(activityEClass, ACTIVITY__PREDECESSOR);
+		createEAttribute(activityEClass, ACTIVITY__TYPE);
+
+		methodFragmentEClass = createEClass(METHOD_FRAGMENT);
+		createEAttribute(methodFragmentEClass, METHOD_FRAGMENT__PROJECT_INDEPENDENT_GUID);
+		createEAttribute(methodFragmentEClass, METHOD_FRAGMENT__PROJECT_SPECIFIC_GUID);
+		createEReference(methodFragmentEClass, METHOD_FRAGMENT__PREPARATIONPHASEFRAGMENT);
+		createEReference(methodFragmentEClass, METHOD_FRAGMENT__TRANSFORMATIONPHASEFRAGMENT);
+
+		toolEClass = createEClass(TOOL);
+
+		roleEClass = createEClass(ROLE);
+
+		// Create enums
+		activityTypeEEnum = createEEnum(ACTIVITY_TYPE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		PreparationPackage thePreparationPackage = (PreparationPackage)EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		TransformationPackage theTransformationPackage = (TransformationPackage)EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		PatternPackage thePatternPackage = (PatternPackage)EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+
+		// Add subpackages
+		getESubpackages().add(thePreparationPackage);
+		getESubpackages().add(theTransformationPackage);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		artifactEClass.getESuperTypes().add(this.getMethodFragment());
+		activityEClass.getESuperTypes().add(this.getMethodFragment());
+		methodFragmentEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		toolEClass.getESuperTypes().add(this.getMethodFragment());
+		roleEClass.getESuperTypes().add(this.getMethodFragment());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(artifactEClass, Artifact.class, "Artifact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArtifact_SubArtifact(), this.getArtifact(), this.getArtifact_SuperArtifact(), "subArtifact", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifact_SuperArtifact(), this.getArtifact(), this.getArtifact_SubArtifact(), "superArtifact", null, 0, 1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifact_InputTo(), this.getActivity(), this.getActivity_Input(), "inputTo", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifact_OutputFrom(), this.getActivity(), this.getActivity_Output(), "outputFrom", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifact_ReferencedSubArtifact(), this.getArtifact(), this.getArtifact_ReferencedSuperArtifact(), "referencedSubArtifact", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifact_ReferencedSuperArtifact(), this.getArtifact(), this.getArtifact_ReferencedSubArtifact(), "referencedSuperArtifact", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActivity_Input(), this.getArtifact(), this.getArtifact_InputTo(), "input", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Role(), this.getRole(), null, "role", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Tool(), this.getTool(), null, "tool", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_SubActivity(), this.getActivity(), this.getActivity_SuperActivity(), "subActivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_SuperActivity(), this.getActivity(), this.getActivity_SubActivity(), "superActivity", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Output(), this.getArtifact(), this.getArtifact_OutputFrom(), "output", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_ReferencedSubActivity(), this.getActivity(), this.getActivity_ReferencedSuperActivity(), "referencedSubActivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_ReferencedSuperActivity(), this.getActivity(), this.getActivity_ReferencedSubActivity(), "referencedSuperActivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Successor(), this.getActivity(), this.getActivity_Predecessor(), "successor", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Predecessor(), this.getActivity(), this.getActivity_Successor(), "predecessor", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Type(), this.getActivityType(), "type", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(methodFragmentEClass, MethodFragment.class, "MethodFragment", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMethodFragment_ProjectIndependentGUID(), ecorePackage.getEString(), "projectIndependentGUID", null, 0, 1, MethodFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodFragment_ProjectSpecificGuid(), ecorePackage.getEString(), "projectSpecificGuid", null, 0, 1, MethodFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodFragment_Preparationphasefragment(), thePatternPackage.getPreparationPhaseFragment(), thePatternPackage.getPreparationPhaseFragment_MethodFragment(), "preparationphasefragment", null, 0, 1, MethodFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodFragment_Transformationphasefragment(), thePatternPackage.getTransformationPhaseFragment(), thePatternPackage.getTransformationPhaseFragment_MethodFragment(), "transformationphasefragment", null, 0, 1, MethodFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(toolEClass, Tool.class, "Tool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(activityTypeEEnum, ActivityType.class, "ActivityType");
+		addEEnumLiteral(activityTypeEEnum, ActivityType.AUTOMATIC);
+		addEEnumLiteral(activityTypeEEnum, ActivityType.SEMI_AUTOMATIC);
+		addEEnumLiteral(activityTypeEEnum, ActivityType.MANUAL);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //FragmentPackageImpl

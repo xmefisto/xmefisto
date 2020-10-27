@@ -1,0 +1,619 @@
+/**
+ */
+package xmiml.situation.influence.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.AppliedMethodPattern;
+import xmiml.situation.influence.InfluenceFactor;
+import xmiml.situation.influence.InfluenceFactorModel;
+import xmiml.situation.influence.InfluenceFactory;
+import xmiml.situation.influence.InfluencePackage;
+import xmiml.situation.influence.LegacySystemInfluenceFactor;
+import xmiml.situation.influence.MethodPatternAlternative;
+import xmiml.situation.influence.MethodPatternType;
+import xmiml.situation.influence.OrganizationalInfluenceFactor;
+import xmiml.situation.influence.TargetSystemInfluenceFactor;
+import xmiml.situation.influence.ToolingInfluenceFactor;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class InfluencePackageImpl extends EPackageImpl implements InfluencePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass influenceFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass legacySystemInfluenceFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass targetSystemInfluenceFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass organizationalInfluenceFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toolingInfluenceFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass influenceFactorModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodPatternAlternativeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass appliedMethodPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum methodPatternTypeEEnum = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.situation.influence.InfluencePackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private InfluencePackageImpl() {
+		super(eNS_URI, InfluenceFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link InfluencePackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static InfluencePackage init() {
+		if (isInited) return (InfluencePackage)EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredInfluencePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		InfluencePackageImpl theInfluencePackage = registeredInfluencePackage instanceof InfluencePackageImpl ? (InfluencePackageImpl)registeredInfluencePackage : new InfluencePackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theInfluencePackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theInfluencePackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theInfluencePackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(InfluencePackage.eNS_URI, theInfluencePackage);
+		return theInfluencePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getInfluenceFactor() {
+		return influenceFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInfluenceFactor_InfluencedMethodPattern() {
+		return (EReference)influenceFactorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInfluenceFactor_InfluenceFactorModel() {
+		return (EReference)influenceFactorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInfluenceFactor_Implication() {
+		return (EAttribute)influenceFactorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLegacySystemInfluenceFactor() {
+		return legacySystemInfluenceFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTargetSystemInfluenceFactor() {
+		return targetSystemInfluenceFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOrganizationalInfluenceFactor() {
+		return organizationalInfluenceFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getToolingInfluenceFactor() {
+		return toolingInfluenceFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getInfluenceFactorModel() {
+		return influenceFactorModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInfluenceFactorModel_InfluenceFactor() {
+		return (EReference)influenceFactorModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMethodPatternAlternative() {
+		return methodPatternAlternativeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternAlternative_Pros() {
+		return (EAttribute)methodPatternAlternativeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternAlternative_Cons() {
+		return (EAttribute)methodPatternAlternativeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPatternAlternative_InfluenceFactor() {
+		return (EReference)methodPatternAlternativeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternAlternative_Type() {
+		return (EAttribute)methodPatternAlternativeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPatternAlternative_Concept() {
+		return (EReference)methodPatternAlternativeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPatternAlternative_Chosen() {
+		return (EReference)methodPatternAlternativeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAppliedMethodPattern() {
+		return appliedMethodPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAppliedMethodPattern_Rationale() {
+		return (EAttribute)appliedMethodPatternEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAppliedMethodPattern_Concept() {
+		return (EReference)appliedMethodPatternEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAppliedMethodPattern_Chosen() {
+		return (EReference)appliedMethodPatternEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAppliedMethodPattern_InstantiatedMethodPattern() {
+		return (EReference)appliedMethodPatternEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getMethodPatternType() {
+		return methodPatternTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InfluenceFactory getInfluenceFactory() {
+		return (InfluenceFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		influenceFactorEClass = createEClass(INFLUENCE_FACTOR);
+		createEReference(influenceFactorEClass, INFLUENCE_FACTOR__INFLUENCED_METHOD_PATTERN);
+		createEReference(influenceFactorEClass, INFLUENCE_FACTOR__INFLUENCE_FACTOR_MODEL);
+		createEAttribute(influenceFactorEClass, INFLUENCE_FACTOR__IMPLICATION);
+
+		legacySystemInfluenceFactorEClass = createEClass(LEGACY_SYSTEM_INFLUENCE_FACTOR);
+
+		targetSystemInfluenceFactorEClass = createEClass(TARGET_SYSTEM_INFLUENCE_FACTOR);
+
+		organizationalInfluenceFactorEClass = createEClass(ORGANIZATIONAL_INFLUENCE_FACTOR);
+
+		toolingInfluenceFactorEClass = createEClass(TOOLING_INFLUENCE_FACTOR);
+
+		influenceFactorModelEClass = createEClass(INFLUENCE_FACTOR_MODEL);
+		createEReference(influenceFactorModelEClass, INFLUENCE_FACTOR_MODEL__INFLUENCE_FACTOR);
+
+		methodPatternAlternativeEClass = createEClass(METHOD_PATTERN_ALTERNATIVE);
+		createEAttribute(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__PROS);
+		createEAttribute(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__CONS);
+		createEReference(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__INFLUENCE_FACTOR);
+		createEAttribute(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__TYPE);
+		createEReference(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__CONCEPT);
+		createEReference(methodPatternAlternativeEClass, METHOD_PATTERN_ALTERNATIVE__CHOSEN);
+
+		appliedMethodPatternEClass = createEClass(APPLIED_METHOD_PATTERN);
+		createEAttribute(appliedMethodPatternEClass, APPLIED_METHOD_PATTERN__RATIONALE);
+		createEReference(appliedMethodPatternEClass, APPLIED_METHOD_PATTERN__CONCEPT);
+		createEReference(appliedMethodPatternEClass, APPLIED_METHOD_PATTERN__CHOSEN);
+		createEReference(appliedMethodPatternEClass, APPLIED_METHOD_PATTERN__INSTANTIATED_METHOD_PATTERN);
+
+		// Create enums
+		methodPatternTypeEEnum = createEEnum(METHOD_PATTERN_TYPE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		ConceptPackage theConceptPackage = (ConceptPackage)EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		PatternPackage thePatternPackage = (PatternPackage)EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		influenceFactorEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		legacySystemInfluenceFactorEClass.getESuperTypes().add(this.getInfluenceFactor());
+		targetSystemInfluenceFactorEClass.getESuperTypes().add(this.getInfluenceFactor());
+		organizationalInfluenceFactorEClass.getESuperTypes().add(this.getInfluenceFactor());
+		toolingInfluenceFactorEClass.getESuperTypes().add(this.getInfluenceFactor());
+		influenceFactorModelEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		methodPatternAlternativeEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		appliedMethodPatternEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(influenceFactorEClass, InfluenceFactor.class, "InfluenceFactor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInfluenceFactor_InfluencedMethodPattern(), this.getMethodPatternAlternative(), this.getMethodPatternAlternative_InfluenceFactor(), "influencedMethodPattern", null, 0, -1, InfluenceFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInfluenceFactor_InfluenceFactorModel(), this.getInfluenceFactorModel(), this.getInfluenceFactorModel_InfluenceFactor(), "influenceFactorModel", null, 0, 1, InfluenceFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInfluenceFactor_Implication(), ecorePackage.getEString(), "implication", null, 0, 1, InfluenceFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(legacySystemInfluenceFactorEClass, LegacySystemInfluenceFactor.class, "LegacySystemInfluenceFactor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(targetSystemInfluenceFactorEClass, TargetSystemInfluenceFactor.class, "TargetSystemInfluenceFactor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(organizationalInfluenceFactorEClass, OrganizationalInfluenceFactor.class, "OrganizationalInfluenceFactor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toolingInfluenceFactorEClass, ToolingInfluenceFactor.class, "ToolingInfluenceFactor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(influenceFactorModelEClass, InfluenceFactorModel.class, "InfluenceFactorModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInfluenceFactorModel_InfluenceFactor(), this.getInfluenceFactor(), this.getInfluenceFactor_InfluenceFactorModel(), "influenceFactor", null, 0, -1, InfluenceFactorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(methodPatternAlternativeEClass, MethodPatternAlternative.class, "MethodPatternAlternative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMethodPatternAlternative_Pros(), ecorePackage.getEString(), "pros", null, 0, 1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternAlternative_Cons(), ecorePackage.getEString(), "cons", null, 0, 1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPatternAlternative_InfluenceFactor(), this.getInfluenceFactor(), this.getInfluenceFactor_InfluencedMethodPattern(), "influenceFactor", null, 0, -1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternAlternative_Type(), this.getMethodPatternType(), "type", null, 0, 1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPatternAlternative_Concept(), theConceptPackage.getConcept(), theConceptPackage.getConcept_SuitableMethodPattern(), "concept", null, 0, 1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPatternAlternative_Chosen(), this.getAppliedMethodPattern(), this.getAppliedMethodPattern_Chosen(), "chosen", null, 0, 1, MethodPatternAlternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(appliedMethodPatternEClass, AppliedMethodPattern.class, "AppliedMethodPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAppliedMethodPattern_Rationale(), ecorePackage.getEString(), "rationale", null, 0, 1, AppliedMethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppliedMethodPattern_Concept(), theConceptPackage.getConcept(), theConceptPackage.getConcept_AppliedMethodPattern(), "concept", null, 0, 1, AppliedMethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppliedMethodPattern_Chosen(), this.getMethodPatternAlternative(), this.getMethodPatternAlternative_Chosen(), "chosen", null, 0, 1, AppliedMethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppliedMethodPattern_InstantiatedMethodPattern(), thePatternPackage.getMethodPattern(), thePatternPackage.getMethodPattern_AppliedMethodPattern(), "instantiatedMethodPattern", null, 0, 1, AppliedMethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(methodPatternTypeEEnum, MethodPatternType.class, "MethodPatternType");
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.LANGUAGE_TRANSFORMATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.CONCEPTUAL_TRANSFORMATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.REIMPLEMENTATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.CODE_REMOVAL);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.PLATFORM_DEPENDENT_ARCHITECTURE_RESTRUCTURING);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.PLATFORM_INDEPENDENT_ARCHITECTURE_RESTRUCTURING);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.LANGUAGE_TRANSFORMATION_BASED_REIMPLEMENTATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.CONCEPT_RECOGNITION_BASED_REIMPLEMENTATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.CONCEPT_RECOGNITION_BASED_LANGUAGE_TRANSFORMATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.CONCEPT_RECOGNITION_AND_LANGUAGE_TRANSFORMATION_BASED_REIMPLEMENTATION);
+		addEEnumLiteral(methodPatternTypeEEnum, MethodPatternType.ARCHITECTURE_RESTRUCTURING);
+	}
+
+} //InfluencePackageImpl

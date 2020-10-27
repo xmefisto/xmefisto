@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.upb.dbis.sme.xmiml.xmefisto:xMefistoModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.upb.dbis.sme.xmiml.xmefisto="http://de.upb.dbis.sme/xmiml/xmefisto" xmlns:de.upb.grieger.miml.situation.concept="http://de.upb.grieger/miml/situation/concept">
+  <situationalContextModel>
+    <conceptModel>
+      <concerns name="Modularization">
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ArchitecturalConcept" name="Module">
+          <appliedMethodPattern/>
+        </concepts>
+      </concerns>
+      <concerns name="Model">
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Data Access">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Table">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Table-Based View">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="View Relation">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Attribute Calculation">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Table Relation">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Attribute Validation">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Primary Table">
+          <appliedMethodPattern/>
+        </concepts>
+        <concepts xsi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" name="Foreign Table">
+          <appliedMethodPattern/>
+        </concepts>
+      </concerns>
+    </conceptModel>
+    <influenceFactorModel/>
+  </situationalContextModel>
+</de.upb.dbis.sme.xmiml.xmefisto:xMefistoModel>

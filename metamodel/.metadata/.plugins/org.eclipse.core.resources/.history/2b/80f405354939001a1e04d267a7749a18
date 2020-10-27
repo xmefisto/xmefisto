@@ -1,0 +1,421 @@
+/**
+ */
+package xmiml.pattern.basic.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EValidator;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicFactory;
+import xmiml.pattern.basic.BasicPackage;
+import xmiml.pattern.basic.CodeRemovalPattern;
+import xmiml.pattern.basic.ConceptualTransformationPattern;
+import xmiml.pattern.basic.LanguageTransformationPattern;
+import xmiml.pattern.basic.PlatformDependentArchitectureRestructuringPattern;
+import xmiml.pattern.basic.PlatformIndependentArchitectureRestructuringPattern;
+import xmiml.pattern.basic.ReimplementationPattern;
+
+import xmiml.pattern.basic.util.BasicValidator;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class BasicPackageImpl extends EPackageImpl implements BasicPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass languageTransformationPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conceptualTransformationPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reimplementationPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeRemovalPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformDependentArchitectureRestructuringPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformIndependentArchitectureRestructuringPatternEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.pattern.basic.BasicPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private BasicPackageImpl() {
+		super(eNS_URI, BasicFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link BasicPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static BasicPackage init() {
+		if (isInited) return (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredBasicPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		BasicPackageImpl theBasicPackage = registeredBasicPackage instanceof BasicPackageImpl ? (BasicPackageImpl)registeredBasicPackage : new BasicPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theBasicPackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theBasicPackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theBasicPackage,
+			 new EValidator.Descriptor() {
+				 @Override
+				 public EValidator getEValidator() {
+					 return BasicValidator.INSTANCE;
+				 }
+			 });
+
+		// Mark meta-data to indicate it can't be changed
+		theBasicPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(BasicPackage.eNS_URI, theBasicPackage);
+		return theBasicPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLanguageTransformationPattern() {
+		return languageTransformationPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConceptualTransformationPattern() {
+		return conceptualTransformationPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReimplementationPattern() {
+		return reimplementationPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeRemovalPattern() {
+		return codeRemovalPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformDependentArchitectureRestructuringPattern() {
+		return platformDependentArchitectureRestructuringPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformIndependentArchitectureRestructuringPattern() {
+		return platformIndependentArchitectureRestructuringPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BasicFactory getBasicFactory() {
+		return (BasicFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		languageTransformationPatternEClass = createEClass(LANGUAGE_TRANSFORMATION_PATTERN);
+
+		conceptualTransformationPatternEClass = createEClass(CONCEPTUAL_TRANSFORMATION_PATTERN);
+
+		reimplementationPatternEClass = createEClass(REIMPLEMENTATION_PATTERN);
+
+		codeRemovalPatternEClass = createEClass(CODE_REMOVAL_PATTERN);
+
+		platformDependentArchitectureRestructuringPatternEClass = createEClass(PLATFORM_DEPENDENT_ARCHITECTURE_RESTRUCTURING_PATTERN);
+
+		platformIndependentArchitectureRestructuringPatternEClass = createEClass(PLATFORM_INDEPENDENT_ARCHITECTURE_RESTRUCTURING_PATTERN);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		PatternPackage thePatternPackage = (PatternPackage)EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		languageTransformationPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+		conceptualTransformationPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+		reimplementationPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+		codeRemovalPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+		platformDependentArchitectureRestructuringPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+		platformIndependentArchitectureRestructuringPatternEClass.getESuperTypes().add(thePatternPackage.getMethodPattern());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(languageTransformationPatternEClass, LanguageTransformationPattern.class, "LanguageTransformationPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(conceptualTransformationPatternEClass, ConceptualTransformationPattern.class, "ConceptualTransformationPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reimplementationPatternEClass, ReimplementationPattern.class, "ReimplementationPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeRemovalPatternEClass, CodeRemovalPattern.class, "CodeRemovalPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformDependentArchitectureRestructuringPatternEClass, PlatformDependentArchitectureRestructuringPattern.class, "PlatformDependentArchitectureRestructuringPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformIndependentArchitectureRestructuringPatternEClass, PlatformIndependentArchitectureRestructuringPattern.class, "PlatformIndependentArchitectureRestructuringPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (languageTransformationPatternEClass,
+		   source,
+		   new String[] {
+			   "constraints", "languageTransformationPatternFragments"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (languageTransformationPatternEClass,
+		   source,
+		   new String[] {
+			   "languageTransformationPatternFragments", "self.transformationphasefragments.methodFragment->forAll(fragment | fragment.oclIsTypeOf(fragment::transformation::ModelDiscovery) or fragment.oclIsTypeOf(fragment::transformation::Enrichment) or fragment.oclIsTypeOf(fragment::transformation::LanguageTransformation) or fragment.oclIsTypeOf(fragment::transformation::CodeGeneration) or fragment.oclIsTypeOf(fragment::transformation::System) or fragment.oclIsTypeOf(fragment::transformation::Platform) or fragment.oclIsTypeOf(fragment::transformation::LegacySourceCode) or fragment.oclIsTypeOf(fragment::transformation::LPSM) or fragment.oclIsTypeOf(fragment::transformation::TPSM) or fragment.oclIsTypeOf(fragment::transformation::TransformedSourceCode))"
+		   });
+	}
+
+} //BasicPackageImpl

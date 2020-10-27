@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/pattern"
+            class="xmiml.pattern.PatternPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/pattern/comigration"
+            class="xmiml.pattern.comigration.ComigrationPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/pattern/basicSystemPattern"
+            class="xmiml.pattern.basicSystemPattern.BasicSystemPatternPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/pattern/composedSystemPattern"
+            class="xmiml.pattern.composedSystemPattern.ComposedSystemPatternPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/pattern/basicTestPattern"
+            class="xmiml.pattern.basicTestPattern.BasicTestPatternPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/xmefisto"
+            class="xmiml.xmefisto.XmefistoPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/fragment"
+            class="xmiml.fragment.FragmentPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/fragment/preparation_system"
+            class="xmiml.fragment.preparation_system.Preparation_systemPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/fragment/transformation_system"
+            class="xmiml.fragment.transformation_system.Transformation_systemPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/fragment/preparation_test"
+            class="xmiml.fragment.preparation_test.Preparation_testPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/fragment/transformation_test"
+            class="xmiml.fragment.transformation_test.Transformation_testPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/core"
+            class="xmiml.core.CorePackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/situation"
+            class="xmiml.situation.SituationPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/situation/influence"
+            class="xmiml.situation.influence.InfluencePackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/situation/concept"
+            class="xmiml.situation.concept.ConceptPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xmefisto -->
+      <package
+            uri="http://de.upb.dbis.sme/xmiml/situation/impact"
+            class="xmiml.situation.impact.ImpactPackage"
+            genModel="model/xmefisto.genmodel"/>
+   </extension>
+
+</plugin>

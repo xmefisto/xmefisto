@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.upb.dbis.sme.xmiml.xmefisto:xMefistoModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:de.upb.dbis.sme.xmiml.xmefisto="http://de.upb.dbis.sme/xmiml/xmefisto">
+  <situationalContextModel>
+    <conceptModel>
+      <concerns/>
+      <concerns/>
+    </conceptModel>
+    <influenceFactorModel/>
+  </situationalContextModel>
+</de.upb.dbis.sme.xmiml.xmefisto:xMefistoModel>

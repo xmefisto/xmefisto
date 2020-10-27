@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_0bI1wDlHEeqPa9DV2tUMAQ" selectedViews="__XFMoDlMEeqQZP1Me_fmxQ" version="14.1.0.201810161215">
+  <semanticResources>My.xmefisto</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" uid="__XFMoDlMEeqQZP1Me_fmxQ">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

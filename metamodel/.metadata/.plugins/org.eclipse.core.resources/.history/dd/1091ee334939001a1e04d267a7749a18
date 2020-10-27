@@ -1,0 +1,284 @@
+/**
+ */
+package xmiml.situation.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationFactory;
+import xmiml.situation.SituationPackage;
+import xmiml.situation.SituationalContextModel;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class SituationPackageImpl extends EPackageImpl implements SituationPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass situationalContextModelEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.situation.SituationPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private SituationPackageImpl() {
+		super(eNS_URI, SituationFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link SituationPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static SituationPackage init() {
+		if (isInited) return (SituationPackage)EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredSituationPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SituationPackageImpl theSituationPackage = registeredSituationPackage instanceof SituationPackageImpl ? (SituationPackageImpl)registeredSituationPackage : new SituationPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theSituationPackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theSituationPackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theSituationPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(SituationPackage.eNS_URI, theSituationPackage);
+		return theSituationPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSituationalContextModel() {
+		return situationalContextModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSituationalContextModel_ConceptModel() {
+		return (EReference)situationalContextModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSituationalContextModel_InfluenceFactorModel() {
+		return (EReference)situationalContextModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SituationFactory getSituationFactory() {
+		return (SituationFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		situationalContextModelEClass = createEClass(SITUATIONAL_CONTEXT_MODEL);
+		createEReference(situationalContextModelEClass, SITUATIONAL_CONTEXT_MODEL__CONCEPT_MODEL);
+		createEReference(situationalContextModelEClass, SITUATIONAL_CONTEXT_MODEL__INFLUENCE_FACTOR_MODEL);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		InfluencePackage theInfluencePackage = (InfluencePackage)EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		ConceptPackage theConceptPackage = (ConceptPackage)EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+
+		// Add subpackages
+		getESubpackages().add(theInfluencePackage);
+		getESubpackages().add(theConceptPackage);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		situationalContextModelEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(situationalContextModelEClass, SituationalContextModel.class, "SituationalContextModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSituationalContextModel_ConceptModel(), theConceptPackage.getConceptModel(), null, "conceptModel", null, 0, -1, SituationalContextModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSituationalContextModel_InfluenceFactorModel(), theInfluencePackage.getInfluenceFactorModel(), null, "influenceFactorModel", null, 0, -1, SituationalContextModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //SituationPackageImpl

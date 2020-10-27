@@ -1,0 +1,935 @@
+/**
+ */
+package xmiml.fragment.transformation.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EValidator;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.APIMEnrichment;
+import xmiml.fragment.transformation.ArchitectureRestructuring;
+import xmiml.fragment.transformation.CodeGeneration;
+import xmiml.fragment.transformation.CodeGenerationEngine;
+import xmiml.fragment.transformation.Concretization;
+import xmiml.fragment.transformation.FPIMEnrichment;
+import xmiml.fragment.transformation.LPSMEnrichment;
+import xmiml.fragment.transformation.LanguageTransformation;
+import xmiml.fragment.transformation.LegacySourceCode;
+import xmiml.fragment.transformation.ModelDiscovery;
+import xmiml.fragment.transformation.ModelTransformationEngine;
+import xmiml.fragment.transformation.Parser;
+import xmiml.fragment.transformation.Platform;
+import xmiml.fragment.transformation.PlatformDependentArchitectureConcretization;
+import xmiml.fragment.transformation.PlatformDependentArchitectureRecovery;
+import xmiml.fragment.transformation.PlatformIndependentArchitectureConcretization;
+import xmiml.fragment.transformation.PlatformIndependentArchitectureRecovery;
+import xmiml.fragment.transformation.ProgramComprehension;
+import xmiml.fragment.transformation.Reimplementation;
+import xmiml.fragment.transformation.Restructuring;
+import xmiml.fragment.transformation.SoftwareDeveloper;
+import xmiml.fragment.transformation.SystemExpert;
+import xmiml.fragment.transformation.TransformationFactory;
+import xmiml.fragment.transformation.TransformationPackage;
+import xmiml.fragment.transformation.TransformedSourceCode;
+
+import xmiml.fragment.transformation.util.TransformationValidator;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class TransformationPackageImpl extends EPackageImpl implements TransformationPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reimplementationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelDiscoveryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass programComprehensionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concretizationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeGenerationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass languageTransformationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformIndependentArchitectureRecoveryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass architectureRestructuringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lpsmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tpsmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass legacySourceCodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transformedSourceCodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fpimEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apimEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lpsmEnrichmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass restructuringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass softwareDeveloperEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemExpertEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformIndependentArchitectureConcretizationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelTransformationEngineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeGenerationEngineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parserEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fpimEnrichmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass apimEnrichmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformDependentArchitectureRecoveryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass platformDependentArchitectureConcretizationEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.fragment.transformation.TransformationPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private TransformationPackageImpl() {
+		super(eNS_URI, TransformationFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link TransformationPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static TransformationPackage init() {
+		if (isInited) return (TransformationPackage)EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredTransformationPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		TransformationPackageImpl theTransformationPackage = registeredTransformationPackage instanceof TransformationPackageImpl ? (TransformationPackageImpl)registeredTransformationPackage : new TransformationPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theTransformationPackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theTransformationPackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theTransformationPackage,
+			 new EValidator.Descriptor() {
+				 @Override
+				 public EValidator getEValidator() {
+					 return TransformationValidator.INSTANCE;
+				 }
+			 });
+
+		// Mark meta-data to indicate it can't be changed
+		theTransformationPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(TransformationPackage.eNS_URI, theTransformationPackage);
+		return theTransformationPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReimplementation() {
+		return reimplementationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModelDiscovery() {
+		return modelDiscoveryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getProgramComprehension() {
+		return programComprehensionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConcretization() {
+		return concretizationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeGeneration() {
+		return codeGenerationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLanguageTransformation() {
+		return languageTransformationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformIndependentArchitectureRecovery() {
+		return platformIndependentArchitectureRecoveryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArchitectureRestructuring() {
+		return architectureRestructuringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLPSM() {
+		return lpsmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTPSM() {
+		return tpsmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLegacySourceCode() {
+		return legacySourceCodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLegacySourceCode_GetsRemoved() {
+		return (EAttribute)legacySourceCodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTransformedSourceCode() {
+		return transformedSourceCodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFPIM() {
+		return fpimEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAPIM() {
+		return apimEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLPSMEnrichment() {
+		return lpsmEnrichmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRestructuring() {
+		return restructuringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatform() {
+		return platformEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystem() {
+		return systemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSoftwareDeveloper() {
+		return softwareDeveloperEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystemExpert() {
+		return systemExpertEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformIndependentArchitectureConcretization() {
+		return platformIndependentArchitectureConcretizationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModelTransformationEngine() {
+		return modelTransformationEngineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeGenerationEngine() {
+		return codeGenerationEngineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getParser() {
+		return parserEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFPIMEnrichment() {
+		return fpimEnrichmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAPIMEnrichment() {
+		return apimEnrichmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformDependentArchitectureRecovery() {
+		return platformDependentArchitectureRecoveryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPlatformDependentArchitectureConcretization() {
+		return platformDependentArchitectureConcretizationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TransformationFactory getTransformationFactory() {
+		return (TransformationFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		reimplementationEClass = createEClass(REIMPLEMENTATION);
+
+		modelDiscoveryEClass = createEClass(MODEL_DISCOVERY);
+
+		programComprehensionEClass = createEClass(PROGRAM_COMPREHENSION);
+
+		concretizationEClass = createEClass(CONCRETIZATION);
+
+		codeGenerationEClass = createEClass(CODE_GENERATION);
+
+		languageTransformationEClass = createEClass(LANGUAGE_TRANSFORMATION);
+
+		platformIndependentArchitectureRecoveryEClass = createEClass(PLATFORM_INDEPENDENT_ARCHITECTURE_RECOVERY);
+
+		architectureRestructuringEClass = createEClass(ARCHITECTURE_RESTRUCTURING);
+
+		lpsmEClass = createEClass(LPSM);
+
+		tpsmEClass = createEClass(TPSM);
+
+		legacySourceCodeEClass = createEClass(LEGACY_SOURCE_CODE);
+		createEAttribute(legacySourceCodeEClass, LEGACY_SOURCE_CODE__GETS_REMOVED);
+
+		transformedSourceCodeEClass = createEClass(TRANSFORMED_SOURCE_CODE);
+
+		fpimEClass = createEClass(FPIM);
+
+		apimEClass = createEClass(APIM);
+
+		lpsmEnrichmentEClass = createEClass(LPSM_ENRICHMENT);
+
+		restructuringEClass = createEClass(RESTRUCTURING);
+
+		platformEClass = createEClass(PLATFORM);
+
+		systemEClass = createEClass(SYSTEM);
+
+		softwareDeveloperEClass = createEClass(SOFTWARE_DEVELOPER);
+
+		systemExpertEClass = createEClass(SYSTEM_EXPERT);
+
+		platformIndependentArchitectureConcretizationEClass = createEClass(PLATFORM_INDEPENDENT_ARCHITECTURE_CONCRETIZATION);
+
+		modelTransformationEngineEClass = createEClass(MODEL_TRANSFORMATION_ENGINE);
+
+		codeGenerationEngineEClass = createEClass(CODE_GENERATION_ENGINE);
+
+		parserEClass = createEClass(PARSER);
+
+		fpimEnrichmentEClass = createEClass(FPIM_ENRICHMENT);
+
+		apimEnrichmentEClass = createEClass(APIM_ENRICHMENT);
+
+		platformDependentArchitectureRecoveryEClass = createEClass(PLATFORM_DEPENDENT_ARCHITECTURE_RECOVERY);
+
+		platformDependentArchitectureConcretizationEClass = createEClass(PLATFORM_DEPENDENT_ARCHITECTURE_CONCRETIZATION);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		FragmentPackage theFragmentPackage = (FragmentPackage)EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		reimplementationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		modelDiscoveryEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		programComprehensionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		concretizationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		codeGenerationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		languageTransformationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		platformIndependentArchitectureRecoveryEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		architectureRestructuringEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		lpsmEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		tpsmEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		legacySourceCodeEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		transformedSourceCodeEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		fpimEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		apimEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		lpsmEnrichmentEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		restructuringEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		platformEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		systemEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		softwareDeveloperEClass.getESuperTypes().add(theFragmentPackage.getRole());
+		systemExpertEClass.getESuperTypes().add(theFragmentPackage.getRole());
+		platformIndependentArchitectureConcretizationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		modelTransformationEngineEClass.getESuperTypes().add(theFragmentPackage.getTool());
+		codeGenerationEngineEClass.getESuperTypes().add(theFragmentPackage.getTool());
+		parserEClass.getESuperTypes().add(theFragmentPackage.getTool());
+		fpimEnrichmentEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		apimEnrichmentEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		platformDependentArchitectureRecoveryEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		platformDependentArchitectureConcretizationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(reimplementationEClass, Reimplementation.class, "Reimplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modelDiscoveryEClass, ModelDiscovery.class, "ModelDiscovery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(programComprehensionEClass, ProgramComprehension.class, "ProgramComprehension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(concretizationEClass, Concretization.class, "Concretization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeGenerationEClass, CodeGeneration.class, "CodeGeneration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(languageTransformationEClass, LanguageTransformation.class, "LanguageTransformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformIndependentArchitectureRecoveryEClass, PlatformIndependentArchitectureRecovery.class, "PlatformIndependentArchitectureRecovery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(architectureRestructuringEClass, ArchitectureRestructuring.class, "ArchitectureRestructuring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(lpsmEClass, xmiml.fragment.transformation.LPSM.class, "LPSM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tpsmEClass, xmiml.fragment.transformation.TPSM.class, "TPSM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(legacySourceCodeEClass, LegacySourceCode.class, "LegacySourceCode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLegacySourceCode_GetsRemoved(), ecorePackage.getEBoolean(), "getsRemoved", null, 0, 1, LegacySourceCode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transformedSourceCodeEClass, TransformedSourceCode.class, "TransformedSourceCode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fpimEClass, xmiml.fragment.transformation.FPIM.class, "FPIM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(apimEClass, xmiml.fragment.transformation.APIM.class, "APIM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(lpsmEnrichmentEClass, LPSMEnrichment.class, "LPSMEnrichment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(restructuringEClass, Restructuring.class, "Restructuring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformEClass, Platform.class, "Platform", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(systemEClass, xmiml.fragment.transformation.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(softwareDeveloperEClass, SoftwareDeveloper.class, "SoftwareDeveloper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(systemExpertEClass, SystemExpert.class, "SystemExpert", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformIndependentArchitectureConcretizationEClass, PlatformIndependentArchitectureConcretization.class, "PlatformIndependentArchitectureConcretization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modelTransformationEngineEClass, ModelTransformationEngine.class, "ModelTransformationEngine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeGenerationEngineEClass, CodeGenerationEngine.class, "CodeGenerationEngine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(parserEClass, Parser.class, "Parser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fpimEnrichmentEClass, FPIMEnrichment.class, "FPIMEnrichment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(apimEnrichmentEClass, APIMEnrichment.class, "APIMEnrichment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformDependentArchitectureRecoveryEClass, PlatformDependentArchitectureRecovery.class, "PlatformDependentArchitectureRecovery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(platformDependentArchitectureConcretizationEClass, PlatformDependentArchitectureConcretization.class, "PlatformDependentArchitectureConcretization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (modelDiscoveryEClass,
+		   source,
+		   new String[] {
+			   "constraints", "lpsmOutput"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (modelDiscoveryEClass,
+		   source,
+		   new String[] {
+			   "lpsmOutput", "self.output->forAll(artifact | artifact.oclIsTypeOf(LPSM))"
+		   });
+	}
+
+} //TransformationPackageImpl

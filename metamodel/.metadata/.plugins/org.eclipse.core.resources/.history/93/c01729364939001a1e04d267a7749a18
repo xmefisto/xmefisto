@@ -1,0 +1,526 @@
+/**
+ */
+package xmiml.fragment.preparation.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.CodeGenerationRules;
+import xmiml.fragment.preparation.CodeGenerationRulesDefinition;
+import xmiml.fragment.preparation.Metamodel;
+import xmiml.fragment.preparation.MetamodelDefinition;
+import xmiml.fragment.preparation.MetamodelProfile;
+import xmiml.fragment.preparation.MetamodelProfileDefinition;
+import xmiml.fragment.preparation.ModelTransformationRules;
+import xmiml.fragment.preparation.ModelTransformationRulesDefinition;
+import xmiml.fragment.preparation.PreparationFactory;
+import xmiml.fragment.preparation.PreparationPackage;
+import xmiml.fragment.preparation.ReimplementationGuidance;
+import xmiml.fragment.preparation.ReimplementationGuidanceSpecification;
+import xmiml.fragment.preparation.Tool;
+import xmiml.fragment.preparation.ToolDefinition;
+import xmiml.fragment.preparation.ToolDeveloper;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.PatternPackage;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.pattern.impl.PatternPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class PreparationPackageImpl extends EPackageImpl implements PreparationPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toolDeveloperEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metamodelDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metamodelProfileDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toolDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelTransformationRulesDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeGenerationRulesDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reimplementationGuidanceSpecificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metamodelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metamodelProfileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelTransformationRulesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeGenerationRulesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reimplementationGuidanceEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.fragment.preparation.PreparationPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private PreparationPackageImpl() {
+		super(eNS_URI, PreparationFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link PreparationPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static PreparationPackage init() {
+		if (isInited) return (PreparationPackage)EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredPreparationPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PreparationPackageImpl thePreparationPackage = registeredPreparationPackage instanceof PreparationPackageImpl ? (PreparationPackageImpl)registeredPreparationPackage : new PreparationPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+		PatternPackageImpl thePatternPackage = (PatternPackageImpl)(registeredPackage instanceof PatternPackageImpl ? registeredPackage : PatternPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		thePreparationPackage.createPackageContents();
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		thePreparationPackage.initializePackageContents();
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		thePreparationPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(PreparationPackage.eNS_URI, thePreparationPackage);
+		return thePreparationPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTool() {
+		return toolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getToolDeveloper() {
+		return toolDeveloperEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMetamodelDefinition() {
+		return metamodelDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMetamodelProfileDefinition() {
+		return metamodelProfileDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getToolDefinition() {
+		return toolDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModelTransformationRulesDefinition() {
+		return modelTransformationRulesDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeGenerationRulesDefinition() {
+		return codeGenerationRulesDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReimplementationGuidanceSpecification() {
+		return reimplementationGuidanceSpecificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMetamodel() {
+		return metamodelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMetamodelProfile() {
+		return metamodelProfileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModelTransformationRules() {
+		return modelTransformationRulesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeGenerationRules() {
+		return codeGenerationRulesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReimplementationGuidance() {
+		return reimplementationGuidanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PreparationFactory getPreparationFactory() {
+		return (PreparationFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		toolEClass = createEClass(TOOL);
+
+		toolDeveloperEClass = createEClass(TOOL_DEVELOPER);
+
+		metamodelDefinitionEClass = createEClass(METAMODEL_DEFINITION);
+
+		metamodelProfileDefinitionEClass = createEClass(METAMODEL_PROFILE_DEFINITION);
+
+		toolDefinitionEClass = createEClass(TOOL_DEFINITION);
+
+		modelTransformationRulesDefinitionEClass = createEClass(MODEL_TRANSFORMATION_RULES_DEFINITION);
+
+		codeGenerationRulesDefinitionEClass = createEClass(CODE_GENERATION_RULES_DEFINITION);
+
+		reimplementationGuidanceSpecificationEClass = createEClass(REIMPLEMENTATION_GUIDANCE_SPECIFICATION);
+
+		metamodelEClass = createEClass(METAMODEL);
+
+		metamodelProfileEClass = createEClass(METAMODEL_PROFILE);
+
+		modelTransformationRulesEClass = createEClass(MODEL_TRANSFORMATION_RULES);
+
+		codeGenerationRulesEClass = createEClass(CODE_GENERATION_RULES);
+
+		reimplementationGuidanceEClass = createEClass(REIMPLEMENTATION_GUIDANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		FragmentPackage theFragmentPackage = (FragmentPackage)EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		toolEClass.getESuperTypes().add(theFragmentPackage.getTool());
+		toolDeveloperEClass.getESuperTypes().add(theFragmentPackage.getRole());
+		metamodelDefinitionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		metamodelProfileDefinitionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		toolDefinitionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		modelTransformationRulesDefinitionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		codeGenerationRulesDefinitionEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		reimplementationGuidanceSpecificationEClass.getESuperTypes().add(theFragmentPackage.getActivity());
+		metamodelEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		metamodelProfileEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		modelTransformationRulesEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		codeGenerationRulesEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+		reimplementationGuidanceEClass.getESuperTypes().add(theFragmentPackage.getArtifact());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(toolEClass, Tool.class, "Tool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toolDeveloperEClass, ToolDeveloper.class, "ToolDeveloper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(metamodelDefinitionEClass, MetamodelDefinition.class, "MetamodelDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(metamodelProfileDefinitionEClass, MetamodelProfileDefinition.class, "MetamodelProfileDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toolDefinitionEClass, ToolDefinition.class, "ToolDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modelTransformationRulesDefinitionEClass, ModelTransformationRulesDefinition.class, "ModelTransformationRulesDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeGenerationRulesDefinitionEClass, CodeGenerationRulesDefinition.class, "CodeGenerationRulesDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reimplementationGuidanceSpecificationEClass, ReimplementationGuidanceSpecification.class, "ReimplementationGuidanceSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(metamodelEClass, Metamodel.class, "Metamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(metamodelProfileEClass, MetamodelProfile.class, "MetamodelProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modelTransformationRulesEClass, ModelTransformationRules.class, "ModelTransformationRules", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeGenerationRulesEClass, CodeGenerationRules.class, "CodeGenerationRules", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(reimplementationGuidanceEClass, ReimplementationGuidance.class, "ReimplementationGuidance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+	}
+
+} //PreparationPackageImpl

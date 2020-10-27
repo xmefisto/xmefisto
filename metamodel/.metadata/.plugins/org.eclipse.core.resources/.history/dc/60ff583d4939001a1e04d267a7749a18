@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.pattern.presentation.PatternModelWizardID"
+            name="%_UI_PatternModelWizard_label"
+            class="xmiml.pattern.presentation.PatternModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PatternModelFile.gif">
+         <description>%_UI_PatternModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.pattern.presentation.PatternEditorID"
+            name="%_UI_PatternEditor_label"
+            icon="icons/full/obj16/PatternModelFile.gif"
+            extensions="pattern"
+            class="xmiml.pattern.presentation.PatternEditor"
+            contributorClass="xmiml.pattern.presentation.PatternActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.pattern.basic.presentation.BasicModelWizardID"
+            name="%_UI_BasicModelWizard_label"
+            class="xmiml.pattern.basic.presentation.BasicModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BasicModelFile.gif">
+         <description>%_UI_BasicModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.pattern.basic.presentation.BasicEditorID"
+            name="%_UI_BasicEditor_label"
+            icon="icons/full/obj16/BasicModelFile.gif"
+            extensions="basic"
+            class="xmiml.pattern.basic.presentation.BasicEditor"
+            contributorClass="xmiml.pattern.basic.presentation.BasicActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.pattern.composed.presentation.ComposedModelWizardID"
+            name="%_UI_ComposedModelWizard_label"
+            class="xmiml.pattern.composed.presentation.ComposedModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ComposedModelFile.gif">
+         <description>%_UI_ComposedModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.pattern.composed.presentation.ComposedEditorID"
+            name="%_UI_ComposedEditor_label"
+            icon="icons/full/obj16/ComposedModelFile.gif"
+            extensions="composed"
+            class="xmiml.pattern.composed.presentation.ComposedEditor"
+            contributorClass="xmiml.pattern.composed.presentation.ComposedActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.mefisto.presentation.MefistoModelWizardID"
+            name="%_UI_MefistoModelWizard_label"
+            class="xmiml.mefisto.presentation.MefistoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MefistoModelFile.gif">
+         <description>%_UI_MefistoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.mefisto.presentation.MefistoEditorID"
+            name="%_UI_MefistoEditor_label"
+            icon="icons/full/obj16/MefistoModelFile.gif"
+            extensions="mefisto"
+            class="xmiml.mefisto.presentation.MefistoEditor"
+            contributorClass="xmiml.mefisto.presentation.MefistoActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.fragment.presentation.FragmentModelWizardID"
+            name="%_UI_FragmentModelWizard_label"
+            class="xmiml.fragment.presentation.FragmentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FragmentModelFile.gif">
+         <description>%_UI_FragmentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.fragment.presentation.FragmentEditorID"
+            name="%_UI_FragmentEditor_label"
+            icon="icons/full/obj16/FragmentModelFile.gif"
+            extensions="fragment"
+            class="xmiml.fragment.presentation.FragmentEditor"
+            contributorClass="xmiml.fragment.presentation.FragmentActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.fragment.preparation.presentation.PreparationModelWizardID"
+            name="%_UI_PreparationModelWizard_label"
+            class="xmiml.fragment.preparation.presentation.PreparationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PreparationModelFile.gif">
+         <description>%_UI_PreparationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.fragment.preparation.presentation.PreparationEditorID"
+            name="%_UI_PreparationEditor_label"
+            icon="icons/full/obj16/PreparationModelFile.gif"
+            extensions="preparation"
+            class="xmiml.fragment.preparation.presentation.PreparationEditor"
+            contributorClass="xmiml.fragment.preparation.presentation.PreparationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.fragment.transformation.presentation.TransformationModelWizardID"
+            name="%_UI_TransformationModelWizard_label"
+            class="xmiml.fragment.transformation.presentation.TransformationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TransformationModelFile.gif">
+         <description>%_UI_TransformationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.fragment.transformation.presentation.TransformationEditorID"
+            name="%_UI_TransformationEditor_label"
+            icon="icons/full/obj16/TransformationModelFile.gif"
+            extensions="transformation"
+            class="xmiml.fragment.transformation.presentation.TransformationEditor"
+            contributorClass="xmiml.fragment.transformation.presentation.TransformationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.core.presentation.CoreModelWizardID"
+            name="%_UI_CoreModelWizard_label"
+            class="xmiml.core.presentation.CoreModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CoreModelFile.gif">
+         <description>%_UI_CoreModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.core.presentation.CoreEditorID"
+            name="%_UI_CoreEditor_label"
+            icon="icons/full/obj16/CoreModelFile.gif"
+            extensions="core"
+            class="xmiml.core.presentation.CoreEditor"
+            contributorClass="xmiml.core.presentation.CoreActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.situation.presentation.SituationModelWizardID"
+            name="%_UI_SituationModelWizard_label"
+            class="xmiml.situation.presentation.SituationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SituationModelFile.gif">
+         <description>%_UI_SituationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.situation.presentation.SituationEditorID"
+            name="%_UI_SituationEditor_label"
+            icon="icons/full/obj16/SituationModelFile.gif"
+            extensions="situation"
+            class="xmiml.situation.presentation.SituationEditor"
+            contributorClass="xmiml.situation.presentation.SituationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.situation.influence.presentation.InfluenceModelWizardID"
+            name="%_UI_InfluenceModelWizard_label"
+            class="xmiml.situation.influence.presentation.InfluenceModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/InfluenceModelFile.gif">
+         <description>%_UI_InfluenceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.situation.influence.presentation.InfluenceEditorID"
+            name="%_UI_InfluenceEditor_label"
+            icon="icons/full/obj16/InfluenceModelFile.gif"
+            extensions="influence"
+            class="xmiml.situation.influence.presentation.InfluenceEditor"
+            contributorClass="xmiml.situation.influence.presentation.InfluenceActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated xmefisto -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="xmiml.situation.concept.presentation.ConceptModelWizardID"
+            name="%_UI_ConceptModelWizard_label"
+            class="xmiml.situation.concept.presentation.ConceptModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConceptModelFile.gif">
+         <description>%_UI_ConceptModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xmefisto -->
+      <editor
+            id="xmiml.situation.concept.presentation.ConceptEditorID"
+            name="%_UI_ConceptEditor_label"
+            icon="icons/full/obj16/ConceptModelFile.gif"
+            extensions="concept"
+            class="xmiml.situation.concept.presentation.ConceptEditor"
+            contributorClass="xmiml.situation.concept.presentation.ConceptActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

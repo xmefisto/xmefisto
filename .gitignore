@@ -1,0 +1,8 @@
+/metamodel/de.upb.dbis.sme.xmefisto/src/*
+/metamodel/de.upb.dbis.sme.xmefisto/bin/*
+*.genmodel
+/metamodel/de.upb.dbis.sme.xmefisto.edit/*
+/metamodel/de.upb.dbis.sme.xmefisto.editor/*
+/metamodel/de.upb.dbis.sme.xmefisto.tests/*
+/view/de.upb.dbis.sme.xmefisto.design/*
+/view/de.upb.dbis.sme.xmefisto.design/bin/*

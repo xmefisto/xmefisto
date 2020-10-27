@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.upb.dbis.sme.xmefisto/src" modelPluginID="de.upb.dbis.sme.xmefisto"
+    modelName="Xmefisto" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>xmefisto.ecore</foreignModel>
+  <genPackages prefix="Xmiml" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#/">
+    <nestedGenPackages prefix="Pattern" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//pattern">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="xmefisto.ecore#//pattern/MethodPatternState">
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//pattern/MethodPatternState/Instantiated"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//pattern/MethodPatternState/Configured"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//pattern/MethodPatternState/TransformationPhaseFragmentsInstantiated"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//pattern/MethodPatternState/Merged"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//pattern/MethodPatternState/PreparationPhaseFragmentsInstantiated"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="xmefisto.ecore#//pattern/MethodPattern">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPattern/preparationphasefragments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPattern/transformationphasefragments"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPattern/appliedMethodPattern"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPattern/methodPatternConfiguration"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPattern/methodPatternMergeView"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPattern/state"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//pattern/MethodPatternConfiguration">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/discoverPlatform"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/discoverSystem"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichLPSM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/removeCode"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichFPIM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/restructureFPIM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichAPIM"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPatternConfiguration/methodpattern"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/legacyRealizationName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/targetRealizationName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/discoverPlatformName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/discoverSystemName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/removeCodeName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichLPSMName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichFPIMName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/enrichAPIMName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//pattern/MethodPatternConfiguration/restructureFPIMName"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//pattern/TransformationPhaseFragment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/TransformationPhaseFragment/methodFragment"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//pattern/PreparationPhaseFragment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/PreparationPhaseFragment/methodFragment"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//pattern/TransformationMethodSpecification">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/TransformationMethodSpecification/instantiatedMethodPattern"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//pattern/MethodPatternMergeView">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//pattern/MethodPatternMergeView/mergedMethodPatterns"/>
+      </genClasses>
+      <nestedGenPackages prefix="Basic" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//pattern/basic">
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/LanguageTransformationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/ConceptualTransformationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/ReimplementationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/CodeRemovalPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/PlatformDependentArchitectureRestructuringPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/basic/PlatformIndependentArchitectureRestructuringPattern"/>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Composed" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//pattern/composed">
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/composed/LanguageTransformationBasedReimplementationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/composed/ConceptRecognitionBasedReimplementationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/composed/ConceptRecognitionBasedLanguageTransformationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/composed/ConceptRecognitionAndLanguageTransformationBasedReimplementationPattern"/>
+        <genClasses ecoreClass="xmefisto.ecore#//pattern/composed/ArchitectureRestructuringPattern"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Xmefisto" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//xmefisto">
+      <genClasses ecoreClass="xmefisto.ecore#//xmefisto/xMefistoModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//xmefisto/xMefistoModel/situationalContextModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//xmefisto/xMefistoModel/transformationMethodSpecification"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Fragment" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//fragment">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="xmefisto.ecore#//fragment/ActivityType">
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//fragment/ActivityType/Automatic"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//fragment/ActivityType/SemiAutomatic"/>
+        <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//fragment/ActivityType/Manual"/>
+      </genEnums>
+      <genClasses ecoreClass="xmefisto.ecore#//fragment/Artifact">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/subArtifact"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/superArtifact"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/inputTo"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/outputFrom"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/referencedSubArtifact"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Artifact/referencedSuperArtifact"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//fragment/Activity">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/input"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/tool"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/subActivity"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/superActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/output"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/referencedSubActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/referencedSuperActivity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/successor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/Activity/predecessor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//fragment/Activity/type"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="xmefisto.ecore#//fragment/MethodFragment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//fragment/MethodFragment/projectIndependentGUID"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//fragment/MethodFragment/projectSpecificGuid"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/MethodFragment/preparationphasefragment"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//fragment/MethodFragment/transformationphasefragment"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//fragment/Tool"/>
+      <genClasses ecoreClass="xmefisto.ecore#//fragment/Role"/>
+      <nestedGenPackages prefix="Preparation" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//fragment/preparation">
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/Tool"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ToolDeveloper"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/MetamodelDefinition"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/MetamodelProfileDefinition"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ToolDefinition"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ModelTransformationRulesDefinition"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/CodeGenerationRulesDefinition"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ReimplementationGuidanceSpecification"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/Metamodel"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/MetamodelProfile"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ModelTransformationRules"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/CodeGenerationRules"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/preparation/ReimplementationGuidance"/>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Transformation" disposableProviderFactory="true"
+          ecorePackage="xmefisto.ecore#//fragment/transformation">
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/Reimplementation"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/ModelDiscovery"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/ProgramComprehension"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/Concretization"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/CodeGeneration"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/LanguageTransformation"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/PlatformIndependentArchitectureRecovery"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/ArchitectureRestructuring"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/LPSM"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/TPSM"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/LegacySourceCode">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//fragment/transformation/LegacySourceCode/getsRemoved"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/TransformedSourceCode"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/FPIM"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/APIM"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/LPSMEnrichment"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/Restructuring"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/Platform"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/System"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/SoftwareDeveloper"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/SystemExpert"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/PlatformIndependentArchitectureConcretization"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/ModelTransformationEngine"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/CodeGenerationEngine"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/Parser"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/FPIMEnrichment"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/APIMEnrichment"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/PlatformDependentArchitectureRecovery"/>
+        <genClasses ecoreClass="xmefisto.ecore#//fragment/transformation/PlatformDependentArchitectureConcretization"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Core" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//core">
+      <genClasses image="false" ecoreClass="xmefisto.ecore#//core/MimlElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//core/MimlElement/trace"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//core/MimlElement/description"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="xmefisto.ecore#//core/MimlNamedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//core/MimlNamedElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="xmefisto.ecore#//core/Trace">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//core/Trace/mimlelement"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Situation" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//situation">
+      <genClasses ecoreClass="xmefisto.ecore#//situation/SituationalContextModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/SituationalContextModel/conceptModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/SituationalContextModel/influenceFactorModel"/>
+      </genClasses>
+      <nestedGenPackages prefix="Influence" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//situation/influence">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="xmefisto.ecore#//situation/influence/MethodPatternType">
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/LanguageTransformation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/ConceptualTransformation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/Reimplementation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/CodeRemoval"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/PlatformDependentArchitectureRestructuring"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/PlatformIndependentArchitectureRestructuring"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/LanguageTransformationBasedReimplementation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/ConceptRecognitionBasedReimplementation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/ConceptRecognitionBasedLanguageTransformation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/ConceptRecognitionAndLanguageTransformationBasedReimplementation"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/influence/MethodPatternType/ArchitectureRestructuring"/>
+        </genEnums>
+        <genClasses image="false" ecoreClass="xmefisto.ecore#//situation/influence/InfluenceFactor">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/InfluenceFactor/influencedMethodPattern"/>
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/InfluenceFactor/influenceFactorModel"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/influence/InfluenceFactor/implication"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/LegacySystemInfluenceFactor"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/TargetSystemInfluenceFactor"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/OrganizationalInfluenceFactor"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/ToolingInfluenceFactor"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/InfluenceFactorModel">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/InfluenceFactorModel/influenceFactor"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/MethodPatternAlternative">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/influence/MethodPatternAlternative/pros"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/influence/MethodPatternAlternative/cons"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/MethodPatternAlternative/influenceFactor"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/influence/MethodPatternAlternative/type"/>
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/MethodPatternAlternative/concept"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/MethodPatternAlternative/chosen"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/influence/AppliedMethodPattern">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/influence/AppliedMethodPattern/rationale"/>
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/AppliedMethodPattern/concept"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/AppliedMethodPattern/chosen"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/influence/AppliedMethodPattern/instantiatedMethodPattern"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Concept" disposableProviderFactory="true" ecorePackage="xmefisto.ecore#//situation/concept">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="xmefisto.ecore#//situation/concept/ConceptClass">
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/concept/ConceptClass/SharedConcept"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/concept/ConceptClass/LegacyConcept"/>
+          <genEnumLiterals ecoreEnumLiteral="xmefisto.ecore#//situation/concept/ConceptClass/TargetConcept"/>
+        </genEnums>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/concept/LanguageConcept"/>
+        <genClasses image="false" ecoreClass="xmefisto.ecore#//situation/concept/Concept">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concept/consistsOf"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xmefisto.ecore#//situation/concept/Concept/conceptClass"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concept/isA"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concept/suitableMethodPattern"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concept/appliedMethodPattern"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/concept/Concern">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concern/concepts"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/Concern/concerns"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="xmefisto.ecore#//situation/concept/AbstractConcept"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/concept/ArchitecturalConcept"/>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/concept/ConceptModel">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xmefisto.ecore#//situation/concept/ConceptModel/concerns"/>
+        </genClasses>
+        <genClasses ecoreClass="xmefisto.ecore#//situation/concept/ProgrammingConcept"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

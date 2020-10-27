@@ -1,0 +1,732 @@
+/**
+ */
+package xmiml.pattern.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import xmiml.core.CorePackage;
+
+import xmiml.core.impl.CorePackageImpl;
+
+import xmiml.fragment.FragmentPackage;
+
+import xmiml.fragment.impl.FragmentPackageImpl;
+
+import xmiml.fragment.preparation.PreparationPackage;
+
+import xmiml.fragment.preparation.impl.PreparationPackageImpl;
+
+import xmiml.fragment.transformation.TransformationPackage;
+
+import xmiml.fragment.transformation.impl.TransformationPackageImpl;
+
+import xmiml.mefisto.MefistoPackage;
+
+import xmiml.mefisto.impl.MefistoPackageImpl;
+
+import xmiml.pattern.MethodPattern;
+import xmiml.pattern.MethodPatternConfiguration;
+import xmiml.pattern.MethodPatternMergeView;
+import xmiml.pattern.MethodPatternState;
+import xmiml.pattern.PatternFactory;
+import xmiml.pattern.PatternPackage;
+import xmiml.pattern.PreparationPhaseFragment;
+import xmiml.pattern.TransformationMethodSpecification;
+import xmiml.pattern.TransformationPhaseFragment;
+
+import xmiml.pattern.basic.BasicPackage;
+
+import xmiml.pattern.basic.impl.BasicPackageImpl;
+
+import xmiml.pattern.composed.ComposedPackage;
+
+import xmiml.pattern.composed.impl.ComposedPackageImpl;
+
+import xmiml.situation.SituationPackage;
+
+import xmiml.situation.concept.ConceptPackage;
+
+import xmiml.situation.concept.impl.ConceptPackageImpl;
+
+import xmiml.situation.impl.SituationPackageImpl;
+
+import xmiml.situation.influence.InfluencePackage;
+
+import xmiml.situation.influence.impl.InfluencePackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class PatternPackageImpl extends EPackageImpl implements PatternPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodPatternConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transformationPhaseFragmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass preparationPhaseFragmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass transformationMethodSpecificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodPatternMergeViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum methodPatternStateEEnum = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see xmiml.pattern.PatternPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private PatternPackageImpl() {
+		super(eNS_URI, PatternFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link PatternPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static PatternPackage init() {
+		if (isInited) return (PatternPackage)EPackage.Registry.INSTANCE.getEPackage(PatternPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredPatternPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		PatternPackageImpl thePatternPackage = registeredPatternPackage instanceof PatternPackageImpl ? (PatternPackageImpl)registeredPatternPackage : new PatternPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		BasicPackageImpl theBasicPackage = (BasicPackageImpl)(registeredPackage instanceof BasicPackageImpl ? registeredPackage : BasicPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		ComposedPackageImpl theComposedPackage = (ComposedPackageImpl)(registeredPackage instanceof ComposedPackageImpl ? registeredPackage : ComposedPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MefistoPackage.eNS_URI);
+		MefistoPackageImpl theMefistoPackage = (MefistoPackageImpl)(registeredPackage instanceof MefistoPackageImpl ? registeredPackage : MefistoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+		FragmentPackageImpl theFragmentPackage = (FragmentPackageImpl)(registeredPackage instanceof FragmentPackageImpl ? registeredPackage : FragmentPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PreparationPackage.eNS_URI);
+		PreparationPackageImpl thePreparationPackage = (PreparationPackageImpl)(registeredPackage instanceof PreparationPackageImpl ? registeredPackage : PreparationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TransformationPackage.eNS_URI);
+		TransformationPackageImpl theTransformationPackage = (TransformationPackageImpl)(registeredPackage instanceof TransformationPackageImpl ? registeredPackage : TransformationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SituationPackage.eNS_URI);
+		SituationPackageImpl theSituationPackage = (SituationPackageImpl)(registeredPackage instanceof SituationPackageImpl ? registeredPackage : SituationPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		InfluencePackageImpl theInfluencePackage = (InfluencePackageImpl)(registeredPackage instanceof InfluencePackageImpl ? registeredPackage : InfluencePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConceptPackage.eNS_URI);
+		ConceptPackageImpl theConceptPackage = (ConceptPackageImpl)(registeredPackage instanceof ConceptPackageImpl ? registeredPackage : ConceptPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		thePatternPackage.createPackageContents();
+		theBasicPackage.createPackageContents();
+		theComposedPackage.createPackageContents();
+		theMefistoPackage.createPackageContents();
+		theFragmentPackage.createPackageContents();
+		thePreparationPackage.createPackageContents();
+		theTransformationPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theSituationPackage.createPackageContents();
+		theInfluencePackage.createPackageContents();
+		theConceptPackage.createPackageContents();
+
+		// Initialize created meta-data
+		thePatternPackage.initializePackageContents();
+		theBasicPackage.initializePackageContents();
+		theComposedPackage.initializePackageContents();
+		theMefistoPackage.initializePackageContents();
+		theFragmentPackage.initializePackageContents();
+		thePreparationPackage.initializePackageContents();
+		theTransformationPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theSituationPackage.initializePackageContents();
+		theInfluencePackage.initializePackageContents();
+		theConceptPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		thePatternPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(PatternPackage.eNS_URI, thePatternPackage);
+		return thePatternPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMethodPattern() {
+		return methodPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPattern_Preparationphasefragments() {
+		return (EReference)methodPatternEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPattern_Transformationphasefragments() {
+		return (EReference)methodPatternEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPattern_AppliedMethodPattern() {
+		return (EReference)methodPatternEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPattern_MethodPatternConfiguration() {
+		return (EReference)methodPatternEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPattern_MethodPatternMergeView() {
+		return (EReference)methodPatternEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPattern_State() {
+		return (EAttribute)methodPatternEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMethodPatternConfiguration() {
+		return methodPatternConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_DiscoverPlatform() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_DiscoverSystem() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichLPSM() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_RemoveCode() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichFPIM() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_RestructureFPIM() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichAPIM() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPatternConfiguration_Methodpattern() {
+		return (EReference)methodPatternConfigurationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_LegacyRealizationName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_TargetRealizationName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_DiscoverPlatformName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_DiscoverSystemName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_RemoveCodeName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichLPSMName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichFPIMName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_EnrichAPIMName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMethodPatternConfiguration_RestructureFPIMName() {
+		return (EAttribute)methodPatternConfigurationEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTransformationPhaseFragment() {
+		return transformationPhaseFragmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTransformationPhaseFragment_MethodFragment() {
+		return (EReference)transformationPhaseFragmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPreparationPhaseFragment() {
+		return preparationPhaseFragmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPreparationPhaseFragment_MethodFragment() {
+		return (EReference)preparationPhaseFragmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTransformationMethodSpecification() {
+		return transformationMethodSpecificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTransformationMethodSpecification_InstantiatedMethodPattern() {
+		return (EReference)transformationMethodSpecificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMethodPatternMergeView() {
+		return methodPatternMergeViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMethodPatternMergeView_MergedMethodPatterns() {
+		return (EReference)methodPatternMergeViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getMethodPatternState() {
+		return methodPatternStateEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PatternFactory getPatternFactory() {
+		return (PatternFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		methodPatternEClass = createEClass(METHOD_PATTERN);
+		createEReference(methodPatternEClass, METHOD_PATTERN__PREPARATIONPHASEFRAGMENTS);
+		createEReference(methodPatternEClass, METHOD_PATTERN__TRANSFORMATIONPHASEFRAGMENTS);
+		createEReference(methodPatternEClass, METHOD_PATTERN__APPLIED_METHOD_PATTERN);
+		createEReference(methodPatternEClass, METHOD_PATTERN__METHOD_PATTERN_CONFIGURATION);
+		createEReference(methodPatternEClass, METHOD_PATTERN__METHOD_PATTERN_MERGE_VIEW);
+		createEAttribute(methodPatternEClass, METHOD_PATTERN__STATE);
+
+		methodPatternConfigurationEClass = createEClass(METHOD_PATTERN_CONFIGURATION);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__DISCOVER_PLATFORM);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__DISCOVER_SYSTEM);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_LPSM);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__REMOVE_CODE);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_FPIM);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__RESTRUCTURE_FPIM);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_APIM);
+		createEReference(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__METHODPATTERN);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__LEGACY_REALIZATION_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__TARGET_REALIZATION_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__DISCOVER_PLATFORM_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__DISCOVER_SYSTEM_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__REMOVE_CODE_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_LPSM_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_FPIM_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__ENRICH_APIM_NAME);
+		createEAttribute(methodPatternConfigurationEClass, METHOD_PATTERN_CONFIGURATION__RESTRUCTURE_FPIM_NAME);
+
+		transformationPhaseFragmentEClass = createEClass(TRANSFORMATION_PHASE_FRAGMENT);
+		createEReference(transformationPhaseFragmentEClass, TRANSFORMATION_PHASE_FRAGMENT__METHOD_FRAGMENT);
+
+		preparationPhaseFragmentEClass = createEClass(PREPARATION_PHASE_FRAGMENT);
+		createEReference(preparationPhaseFragmentEClass, PREPARATION_PHASE_FRAGMENT__METHOD_FRAGMENT);
+
+		transformationMethodSpecificationEClass = createEClass(TRANSFORMATION_METHOD_SPECIFICATION);
+		createEReference(transformationMethodSpecificationEClass, TRANSFORMATION_METHOD_SPECIFICATION__INSTANTIATED_METHOD_PATTERN);
+
+		methodPatternMergeViewEClass = createEClass(METHOD_PATTERN_MERGE_VIEW);
+		createEReference(methodPatternMergeViewEClass, METHOD_PATTERN_MERGE_VIEW__MERGED_METHOD_PATTERNS);
+
+		// Create enums
+		methodPatternStateEEnum = createEEnum(METHOD_PATTERN_STATE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
+		ComposedPackage theComposedPackage = (ComposedPackage)EPackage.Registry.INSTANCE.getEPackage(ComposedPackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		InfluencePackage theInfluencePackage = (InfluencePackage)EPackage.Registry.INSTANCE.getEPackage(InfluencePackage.eNS_URI);
+		FragmentPackage theFragmentPackage = (FragmentPackage)EPackage.Registry.INSTANCE.getEPackage(FragmentPackage.eNS_URI);
+
+		// Add subpackages
+		getESubpackages().add(theBasicPackage);
+		getESubpackages().add(theComposedPackage);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		methodPatternEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		methodPatternConfigurationEClass.getESuperTypes().add(theCorePackage.getMimlElement());
+		transformationPhaseFragmentEClass.getESuperTypes().add(theCorePackage.getMimlElement());
+		preparationPhaseFragmentEClass.getESuperTypes().add(theCorePackage.getMimlElement());
+		transformationMethodSpecificationEClass.getESuperTypes().add(theCorePackage.getMimlNamedElement());
+		methodPatternMergeViewEClass.getESuperTypes().add(this.getMethodPattern());
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(methodPatternEClass, MethodPattern.class, "MethodPattern", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMethodPattern_Preparationphasefragments(), this.getPreparationPhaseFragment(), null, "preparationphasefragments", null, 0, -1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPattern_Transformationphasefragments(), this.getTransformationPhaseFragment(), null, "transformationphasefragments", null, 0, -1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPattern_AppliedMethodPattern(), theInfluencePackage.getAppliedMethodPattern(), theInfluencePackage.getAppliedMethodPattern_InstantiatedMethodPattern(), "appliedMethodPattern", null, 0, 1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPattern_MethodPatternConfiguration(), this.getMethodPatternConfiguration(), this.getMethodPatternConfiguration_Methodpattern(), "methodPatternConfiguration", null, 0, 1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPattern_MethodPatternMergeView(), this.getMethodPatternMergeView(), this.getMethodPatternMergeView_MergedMethodPatterns(), "methodPatternMergeView", null, 0, -1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPattern_State(), this.getMethodPatternState(), "state", null, 0, 1, MethodPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(methodPatternConfigurationEClass, MethodPatternConfiguration.class, "MethodPatternConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMethodPatternConfiguration_DiscoverPlatform(), ecorePackage.getEBoolean(), "discoverPlatform", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_DiscoverSystem(), ecorePackage.getEBoolean(), "discoverSystem", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichLPSM(), ecorePackage.getEBoolean(), "enrichLPSM", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_RemoveCode(), ecorePackage.getEBoolean(), "removeCode", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichFPIM(), ecorePackage.getEBoolean(), "enrichFPIM", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_RestructureFPIM(), ecorePackage.getEBoolean(), "restructureFPIM", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichAPIM(), ecorePackage.getEBoolean(), "enrichAPIM", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodPatternConfiguration_Methodpattern(), this.getMethodPattern(), this.getMethodPattern_MethodPatternConfiguration(), "methodpattern", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_LegacyRealizationName(), ecorePackage.getEString(), "legacyRealizationName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_TargetRealizationName(), ecorePackage.getEString(), "targetRealizationName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_DiscoverPlatformName(), ecorePackage.getEString(), "discoverPlatformName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_DiscoverSystemName(), ecorePackage.getEString(), "discoverSystemName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_RemoveCodeName(), ecorePackage.getEString(), "removeCodeName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichLPSMName(), ecorePackage.getEString(), "enrichLPSMName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichFPIMName(), ecorePackage.getEString(), "enrichFPIMName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_EnrichAPIMName(), ecorePackage.getEString(), "enrichAPIMName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethodPatternConfiguration_RestructureFPIMName(), ecorePackage.getEString(), "restructureFPIMName", null, 0, 1, MethodPatternConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transformationPhaseFragmentEClass, TransformationPhaseFragment.class, "TransformationPhaseFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransformationPhaseFragment_MethodFragment(), theFragmentPackage.getMethodFragment(), theFragmentPackage.getMethodFragment_Transformationphasefragment(), "methodFragment", null, 0, -1, TransformationPhaseFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(preparationPhaseFragmentEClass, PreparationPhaseFragment.class, "PreparationPhaseFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPreparationPhaseFragment_MethodFragment(), theFragmentPackage.getMethodFragment(), theFragmentPackage.getMethodFragment_Preparationphasefragment(), "methodFragment", null, 0, -1, PreparationPhaseFragment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(transformationMethodSpecificationEClass, TransformationMethodSpecification.class, "TransformationMethodSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransformationMethodSpecification_InstantiatedMethodPattern(), this.getMethodPattern(), null, "instantiatedMethodPattern", null, 0, -1, TransformationMethodSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(methodPatternMergeViewEClass, MethodPatternMergeView.class, "MethodPatternMergeView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMethodPatternMergeView_MergedMethodPatterns(), this.getMethodPattern(), this.getMethodPattern_MethodPatternMergeView(), "mergedMethodPatterns", null, 0, -1, MethodPatternMergeView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(methodPatternStateEEnum, MethodPatternState.class, "MethodPatternState");
+		addEEnumLiteral(methodPatternStateEEnum, MethodPatternState.INSTANTIATED);
+		addEEnumLiteral(methodPatternStateEEnum, MethodPatternState.CONFIGURED);
+		addEEnumLiteral(methodPatternStateEEnum, MethodPatternState.TRANSFORMATION_PHASE_FRAGMENTS_INSTANTIATED);
+		addEEnumLiteral(methodPatternStateEEnum, MethodPatternState.MERGED);
+		addEEnumLiteral(methodPatternStateEEnum, MethodPatternState.PREPARATION_PHASE_FRAGMENTS_INSTANTIATED);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //PatternPackageImpl

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.upb.grieger.miml.situation="http://de.upb.grieger/miml/situation" xmlns:de.upb.grieger.miml.situation.concept="http://de.upb.grieger/miml/situation/concept" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://de.upb.grieger/miml/situation/concept http://de.upb.grieger/miml/situation#//concept http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_0bI1wDlHEeqPa9DV2tUMAQ" selectedViews="__XFMoDlMEeqQZP1Me_fmxQ" version="14.1.0.201810161215">
+    <semanticResources>My.xmefisto</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="__XFMoDlMEeqQZP1Me_fmxQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PmA5YDlNEeqQZP1Me_fmxQ" name="new Concept Model" repPath="#_Pkt44DlNEeqQZP1Me_fmxQ">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']"/>
+        <target xmi:type="de.upb.grieger.miml.situation:SituationalContextModel" href="My.xmefisto#//@situationalContextModel.0"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_Pkt44DlNEeqQZP1Me_fmxQ" name="new Concept Model">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Pl8A4DlNEeqQZP1Me_fmxQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Pl8A4TlNEeqQZP1Me_fmxQ"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Pm2m4DlNEeqQZP1Me_fmxQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Pm2m4TlNEeqQZP1Me_fmxQ" type="Sirius" element="_Pkt44DlNEeqQZP1Me_fmxQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_PnWWIDlNEeqQZP1Me_fmxQ" type="2002" element="_PlcRoDlNEeqQZP1Me_fmxQ">
+          <children xmi:type="notation:Node" xmi:id="_Pnnb4DlNEeqQZP1Me_fmxQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_Pnp4IDlNEeqQZP1Me_fmxQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_mKldEDlOEeqdV6rXMlDYKA" type="3007" element="_mJqQADlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_mKzfgDlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mKzfgTlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mK4YADlOEeqdV6rXMlDYKA" type="3003" element="_mKLNYDlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mK4YATlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mK4YAjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mKldETlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mKldEjlOEeqdV6rXMlDYKA" x="51" y="43" width="204" height="77"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Pnp4ITlNEeqQZP1Me_fmxQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Pnp4IjlNEeqQZP1Me_fmxQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_PnWWITlNEeqQZP1Me_fmxQ" fontName="Segoe UI" fontHeight="12" bold="true" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PnWWIjlNEeqQZP1Me_fmxQ" x="462" y="21" width="311" height="150"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_PpXvYDlNEeqQZP1Me_fmxQ" type="2002" element="_Pl0sIDlNEeqQZP1Me_fmxQ">
+          <children xmi:type="notation:Node" xmi:id="_PpXvYzlNEeqQZP1Me_fmxQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_PpXvZDlNEeqQZP1Me_fmxQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_0jNvgDlOEeqdV6rXMlDYKA" type="3007" element="_0jBiQDlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_0jPksDlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_0jPksTlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_0jQLwDlOEeqdV6rXMlDYKA" type="3003" element="_0jCJUDlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_0jQLwTlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0jQLwjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_0jNvgTlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0jNvgjlOEeqdV6rXMlDYKA" x="485" y="16" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_133OQDlOEeqdV6rXMlDYKA" type="3007" element="_13kTUDlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_1331UDlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1331UTlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_135DcDlOEeqdV6rXMlDYKA" type="3003" element="_13k6YDlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_135DcTlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_135DcjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_133OQTlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_133OQjlOEeqdV6rXMlDYKA" x="359" y="170" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_2_Xo4DlOEeqdV6rXMlDYKA" type="3007" element="_2_JmcDlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_2_Y3ADlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_2_Y3ATlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_2_aFIDlOEeqdV6rXMlDYKA" type="3003" element="_2_KNgDlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_2_aFITlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2_aFIjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_2_Xo4TlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2_Xo4jlOEeqdV6rXMlDYKA" x="618" y="170" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_6hqq8DlOEeqdV6rXMlDYKA" type="3007" element="_6hlLYDlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_6hqq8zlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_6hqq9DlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_6hrSADlOEeqdV6rXMlDYKA" type="3003" element="_6hlLYTlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_6hrSATlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6hrSAjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_6hqq8TlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6hqq8jlOEeqdV6rXMlDYKA" x="912" y="107" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_7530ADlOEeqdV6rXMlDYKA" type="3007" element="_75q_sDlOEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_754bEDlOEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_754bETlOEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_755pMDlOEeqdV6rXMlDYKA" type="3003" element="_75q_sTlOEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_755pMTlOEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_755pMjlOEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_7530ATlOEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7530AjlOEeqdV6rXMlDYKA" x="912" y="233" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BmweUDlPEeqdV6rXMlDYKA" type="3007" element="_Bmh00DlPEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_BmxscDlPEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BmxscTlPEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Bmy6kDlPEeqdV6rXMlDYKA" type="3003" element="_Bmh00TlPEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_Bmy6kTlPEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bmy6kjlPEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_BmweUTlPEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BmweUjlPEeqdV6rXMlDYKA" x="58" y="107" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DdLNYDlPEeqdV6rXMlDYKA" type="3007" element="_Dc8j4DlPEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_DdL0cDlPEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DdL0cTlPEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DdOQsDlPEeqdV6rXMlDYKA" type="3003" element="_Dc8j4TlPEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DdOQsTlPEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdOQsjlPEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_DdLNYTlPEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdLNYjlPEeqdV6rXMlDYKA" x="58" y="233" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qAp6QDlPEeqdV6rXMlDYKA" type="3007" element="_qAapsDlPEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_qArIYDlPEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_qArIYTlPEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_qAs9kDlPEeqdV6rXMlDYKA" type="3003" element="_qAbQwDlPEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_qAs9kTlPEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qAs9kjlPEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qAp6QTlPEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qAp6QjlPEeqdV6rXMlDYKA" x="226" y="359" width="204" height="77"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_rTAS8DlPEeqdV6rXMlDYKA" type="3007" element="_rSxCYDlPEeqdV6rXMlDYKA">
+              <children xmi:type="notation:Node" xmi:id="_rTA6ADlPEeqdV6rXMlDYKA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_rTA6ATlPEeqdV6rXMlDYKA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_rTBhEDlPEeqdV6rXMlDYKA" type="3003" element="_rSxCYTlPEeqdV6rXMlDYKA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_rTBhETlPEeqdV6rXMlDYKA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rTBhEjlPEeqdV6rXMlDYKA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_rTAS8TlPEeqdV6rXMlDYKA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rTAS8jlPEeqdV6rXMlDYKA" x="485" y="359" width="204" height="77"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_PpXvZTlNEeqQZP1Me_fmxQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_PpXvZjlNEeqQZP1Me_fmxQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_PpXvYTlNEeqQZP1Me_fmxQ" fontName="Segoe UI" fontHeight="12" bold="true" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PpXvYjlNEeqQZP1Me_fmxQ" x="35" y="273" width="1200" height="465"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Pm2m4jlNEeqQZP1Me_fmxQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_PlcRoDlNEeqQZP1Me_fmxQ" name="Modularization">
+      <target xmi:type="de.upb.grieger.miml.situation.concept:Concern" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.0"/>
+      <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:Concern" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_PltXYDlNEeqQZP1Me_fmxQ" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ConcernSpacer.png" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="253,206,137" foregroundColor="253,206,137">
+        <labelFormat>italic</labelFormat>
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_mJqQADlOEeqdV6rXMlDYKA" name="Module" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ArchitecturalConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.0/@concepts.0"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ArchitecturalConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.0/@concepts.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_mKLNYDlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ArchitecturalConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Architectural%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Architectural%20Concept']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Pl0sIDlNEeqQZP1Me_fmxQ" name="Model">
+      <target xmi:type="de.upb.grieger.miml.situation.concept:Concern" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1"/>
+      <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:Concern" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Pl0sITlNEeqQZP1Me_fmxQ" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ConcernSpacer.png" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="253,206,137" foregroundColor="253,206,137">
+        <labelFormat>italic</labelFormat>
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_0jBiQDlOEeqdV6rXMlDYKA" name="Data Access" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.0"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_0jCJUDlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_13kTUDlOEeqdV6rXMlDYKA" name="Table" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.1"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_13k6YDlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_2_JmcDlOEeqdV6rXMlDYKA" name="Table-Based View" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.2"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_2_KNgDlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_6hlLYDlOEeqdV6rXMlDYKA" name="View Relation" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.3"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_6hlLYTlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_75q_sDlOEeqdV6rXMlDYKA" name="Attribute Calculation" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.4"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.4"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_75q_sTlOEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Bmh00DlPEeqdV6rXMlDYKA" name="Table Relation" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.5"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.5"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Bmh00TlPEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Dc8j4DlPEeqdV6rXMlDYKA" name="Attribute Validation" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.6"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.6"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Dc8j4TlPEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_qAapsDlPEeqdV6rXMlDYKA" name="Primary Table" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.7"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.7"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_qAbQwDlPEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_rSxCYDlPEeqdV6rXMlDYKA" name="Foreign Table" width="12" height="5" resizeKind="NSEW">
+        <target xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.8"/>
+        <semanticElements xmi:type="de.upb.grieger.miml.situation.concept:ProgrammingConcept" href="My.xmefisto#//@situationalContextModel.0/@conceptModel.0/@concerns.1/@concepts.8"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_rSxCYTlPEeqdV6rXMlDYKA" labelSize="12" iconPath="/de.upb.dbis.sme.xmefisto.design/figures/ProgrammingConcept.png" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer/@containerMappings[name='Concern']/@subNodeMappings[name='Programming%20Concept']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Pk6GIDlNEeqQZP1Me_fmxQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/de.upb.dbis.sme.xmefisto.design/description/xmefisto.odesign#//@ownedViewpoints[name='xMEFiSTo']/@ownedRepresentations[name='Concept%20Model']/@defaultLayer"/>
+    <target xmi:type="de.upb.grieger.miml.situation:SituationalContextModel" href="My.xmefisto#//@situationalContextModel.0"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

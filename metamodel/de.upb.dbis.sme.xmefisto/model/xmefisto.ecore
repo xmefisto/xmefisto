@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="xmiml" nsURI="http://de.upb.dbis.sme/xmiml" nsPrefix="de.upb.dbis.sme.xmiml">
+  <eSubpackages name="pattern" nsURI="http://de.upb.dbis.sme/xmiml/pattern" nsPrefix="de.upb.dbis.sme.xmiml.pattern">
+    <eClassifiers xsi:type="ecore:EClass" name="MethodPattern" abstract="true" eSuperTypes="#//core/XMimlNamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methodPatternMergeView"
+          upperBound="-1" eType="#//pattern/MethodPatternMergeView" eOpposite="#//pattern/MethodPatternMergeView/mergedMethodPatterns"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//pattern/MethodPatternState"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodPatternConfiguration" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverPlatform" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverSystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichLPSM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichFPIM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restructureFPIM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichAPIM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="legacyRealizationName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetRealizationName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverPlatformName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverSystemName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removeCodeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichLPSMName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichFPIMName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichAPIMName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restructureFPIMName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="systemmethodpattern"
+          eType="#//pattern/SystemMethodPattern" eOpposite="#//pattern/SystemMethodPattern/methodpatternconfiguration"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TransformationPhaseFragment" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methodFragment" upperBound="-1"
+          eType="#//fragment/SystemMethodFragment" containment="true" eOpposite="#//fragment/SystemMethodFragment/transformationphasefragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PreparationPhaseFragment" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methodFragment" upperBound="-1"
+          eType="#//fragment/SystemMethodFragment" containment="true" eOpposite="#//fragment/SystemMethodFragment/preparationphasefragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TransformationMethodSpecification"
+        eSuperTypes="#//core/XMimlNamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="instantiatedMethodPattern"
+          upperBound="-1" eType="#//pattern/MethodPattern" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodPatternMergeView" eSuperTypes="#//pattern/MethodPattern">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mergedMethodPatterns"
+          upperBound="-1" eType="#//pattern/MethodPattern" eOpposite="#//pattern/MethodPattern/methodPatternMergeView"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="MethodPatternState">
+      <eLiterals name="Instantiated"/>
+      <eLiterals name="Configured" value="1"/>
+      <eLiterals name="TransformationPhaseFragmentsInstantiated" value="2"/>
+      <eLiterals name="Merged" value="3"/>
+      <eLiterals name="PreparationPhaseFragmentsInstantiated" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemMethodPattern" abstract="true"
+        eSuperTypes="#//core/XMimlNamedElement #//pattern/MethodPattern">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedMethodPattern"
+          eType="#//situation/influence/AppliedMethodPattern" eOpposite="#//situation/influence/AppliedMethodPattern/instantiatedMethodPattern"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformationphasefragments"
+          upperBound="-1" eType="#//pattern/TransformationPhaseFragment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="preparationphasefragments"
+          upperBound="-1" eType="#//pattern/PreparationPhaseFragment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methodpatternconfiguration"
+          eType="#//pattern/MethodPatternConfiguration" containment="true" eOpposite="#//pattern/MethodPatternConfiguration/systemmethodpattern"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestMethodPattern" abstract="true"
+        eSuperTypes="#//core/XMimlNamedElement #//pattern/MethodPattern">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTestMethodPattern"
+          eType="#//situation/influence/AppliedTestMethodPattern" eOpposite="#//situation/influence/AppliedTestMethodPattern/instantiatedTestMethodPattern"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformationphasetestfragments"
+          upperBound="-1" eType="#//pattern/TransformationPhaseTestFragment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="preparationphasetestfragments"
+          upperBound="-1" eType="#//pattern/PreparationPhaseTestFragment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testmethodpatternconfiguration"
+          eType="#//pattern/TestMethodPatternConfiguration" containment="true" eOpposite="#//pattern/TestMethodPatternConfiguration/testmethodpattern"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ComigrationMethodPattern" abstract="true"
+        eSuperTypes="#//core/XMimlNamedElement #//pattern/MethodPattern">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="systemmethodpattern"
+          eType="#//pattern/SystemMethodPattern" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testmethodpattern" eType="#//pattern/TestMethodPattern"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TransformationPhaseTestFragment" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testmethodFragment" upperBound="-1"
+          eType="#//fragment/TestMethodFragment" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PreparationPhaseTestFragment" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testmethodFragment" upperBound="-1"
+          eType="#//fragment/TestMethodFragment" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestMethodPatternConfiguration" eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverTestPlatform"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverTestSystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichMOET" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removeTestCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichMAT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restructureMAT" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichSBM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="legacyTestRealizationName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetTestRealizationName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverTestPlatformName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="discoverTestSystemName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removeTestCodeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichMOETName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichMATName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="enrichSBMName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restructureMATName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testmethodpattern" eType="#//pattern/TestMethodPattern"
+          eOpposite="#//pattern/TestMethodPattern/testmethodpatternconfiguration"/>
+    </eClassifiers>
+    <eSubpackages name="comigration" nsURI="http://de.upb.dbis.sme/xmiml/pattern/comigration"
+        nsPrefix="de.upb.dbis.sme.xmiml.pattern.comigration">
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationAndLanguageBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="comprisedMethodPatterns"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="comprisedMethodPatterns" value="(self.systemmethodpattern->forAll(pattern | pattern.oclIsTypeOf(pattern::system::basic::LanguageTransformationPattern)))and(self.testmethodpattern->forAll(pattern | pattern.oclIsTypeOf(pattern::test::basic::LanguageBasedTestTransformationPattern)))"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationAndFrameworkBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationAndConceptualTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationAndTestReimplementation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTransformationAndLanguageBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTransformationAndFrameworkBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTransformationAndConceptualTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTransformationAndTestReimplementation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationAndLanguageBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationAndFrameworkBasedTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationAndConceptualTestTransformation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationAndTestReimplementation"
+          eSuperTypes="#//pattern/ComigrationMethodPattern"/>
+    </eSubpackages>
+    <eSubpackages name="basicSystemPattern" nsURI="http://de.upb.dbis.sme/xmiml/pattern/basicSystemPattern"
+        nsPrefix="de.upb.dbis.sme.xmiml.pattern.basicSystemPattern">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationPattern" eSuperTypes="#//pattern/SystemMethodPattern">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="languageTransformationPatternFragments"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="languageTransformationPatternFragments" value="self.transformationphasefragments.methodFragment->forAll(fragment | fragment.oclIsTypeOf(fragment::transformation::ModelDiscovery) or fragment.oclIsTypeOf(fragment::transformation::Enrichment) or fragment.oclIsTypeOf(fragment::transformation::LanguageTransformation) or fragment.oclIsTypeOf(fragment::transformation::CodeGeneration) or fragment.oclIsTypeOf(fragment::transformation::System) or fragment.oclIsTypeOf(fragment::transformation::Platform) or fragment.oclIsTypeOf(fragment::transformation::LegacySourceCode) or fragment.oclIsTypeOf(fragment::transformation::LPSM) or fragment.oclIsTypeOf(fragment::transformation::TPSM) or fragment.oclIsTypeOf(fragment::transformation::TransformedSourceCode))"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTransformationPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationPattern" eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeRemovalPattern" eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformDependentArchitectureRestructuringPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformIndependentArchitectureRestructuringPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+    </eSubpackages>
+    <eSubpackages name="composedSystemPattern" nsURI="http://de.upb.dbis.sme/xmiml/pattern/composedSystemPattern"
+        nsPrefix="de.upb.dbis.sme.xmiml.pattern.composedSystemPattern">
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformationBasedReimplementationPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptRecognitionBasedReimplementationPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptRecognitionBasedLanguageTransformationPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptRecognitionAndLanguageTransformationBasedReimplementationPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ArchitectureRestructuringPattern"
+          eSuperTypes="#//pattern/SystemMethodPattern"/>
+    </eSubpackages>
+    <eSubpackages name="basicTestPattern" nsURI="http://de.upb.dbis.sme/xmiml/pattern/basicTestPattern"
+        nsPrefix="de.upb.dbis.sme.xmiml.pattern.basicTestPattern">
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageBasedTestTransformation"
+          eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestLanguageBasedTestTransformation"
+          eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptualTestTransformation" eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestReimplementation" eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCodeRemoval" eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformdependentTestArchitectureTransformation"
+          eSuperTypes="#//pattern/TestMethodPattern"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformindependentTestArchitectureTransformation"
+          eSuperTypes="#//pattern/TestMethodPattern"/>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="xmefisto" nsURI="http://de.upb.dbis.sme/xmiml/xmefisto" nsPrefix="de.upb.dbis.sme.xmiml.xmefisto">
+    <eClassifiers xsi:type="ecore:EClass" name="xMefistoModel" eSuperTypes="#//core/XMimlNamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="situationalContextModel"
+          upperBound="-1" eType="#//situation/SituationalContextModel" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformationMethodSpecification"
+          upperBound="-1" eType="#//pattern/TransformationMethodSpecification" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="fragment" nsURI="http://de.upb.dbis.sme/xmiml/fragment" nsPrefix="de.upb.dbis.sme.xmiml.fragment">
+    <eClassifiers xsi:type="ecore:EClass" name="SystemArtifact" eSuperTypes="#//fragment/SystemMethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subArtifact" upperBound="-1"
+          eType="#//fragment/SystemArtifact" containment="true" eOpposite="#//fragment/SystemArtifact/superArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superArtifact" eType="#//fragment/SystemArtifact"
+          eOpposite="#//fragment/SystemArtifact/subArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputTo" upperBound="-1"
+          eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/input"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputFrom" upperBound="-1"
+          eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/output"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSubArtifact"
+          upperBound="-1" eType="#//fragment/SystemArtifact" eOpposite="#//fragment/SystemArtifact/referencedSuperArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSuperArtifact"
+          upperBound="-1" eType="#//fragment/SystemArtifact" eOpposite="#//fragment/SystemArtifact/referencedSubArtifact"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemActivity" eSuperTypes="#//fragment/SystemMethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+          eType="#//fragment/SystemArtifact" eOpposite="#//fragment/SystemArtifact/inputTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="systemrole" upperBound="-1"
+          eType="#//fragment/SystemRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="systemtool" upperBound="-1"
+          eType="#//fragment/SystemTool"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subActivity" upperBound="-1"
+          eType="#//fragment/SystemActivity" containment="true" eOpposite="#//fragment/SystemActivity/superActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superActivity" eType="#//fragment/SystemActivity"
+          eOpposite="#//fragment/SystemActivity/subActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
+          eType="#//fragment/SystemArtifact" eOpposite="#//fragment/SystemArtifact/outputFrom"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSubActivity"
+          upperBound="-1" eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/referencedSuperActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSuperActivity"
+          upperBound="-1" eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/referencedSubActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1"
+          eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/predecessor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" upperBound="-1"
+          eType="#//fragment/SystemActivity" eOpposite="#//fragment/SystemActivity/successor"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//fragment/ActivityType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemMethodFragment" abstract="true"
+        eSuperTypes="#//core/XMimlNamedElement #//fragment/MethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="preparationphasefragment"
+          eType="#//pattern/PreparationPhaseFragment" eOpposite="#//pattern/PreparationPhaseFragment/methodFragment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformationphasefragment"
+          eType="#//pattern/TransformationPhaseFragment" eOpposite="#//pattern/TransformationPhaseFragment/methodFragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemTool" eSuperTypes="#//fragment/SystemMethodFragment"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemRole" eSuperTypes="#//fragment/SystemMethodFragment"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="ActivityType">
+      <eLiterals name="Automatic"/>
+      <eLiterals name="SemiAutomatic" value="1"/>
+      <eLiterals name="Manual" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodFragment" abstract="true" eSuperTypes="#//core/XMimlNamedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectIndependentGUID"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectSpecificGuid"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestMethodFragment" abstract="true"
+        eSuperTypes="#//core/XMimlNamedElement #//fragment/MethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformationphasetestfragment"
+          eType="#//pattern/TransformationPhaseTestFragment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="preparationphasetestfragment"
+          eType="#//pattern/PreparationPhaseTestFragment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" upperBound="-1"
+          eType="#//fragment/SystemMethodFragment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestTool" eSuperTypes="#//fragment/TestMethodFragment"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TestActivity" eSuperTypes="#//fragment/TestMethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+          eType="#//fragment/TestArtifact" eOpposite="#//fragment/TestArtifact/inputTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subActivity" upperBound="-1"
+          eType="#//fragment/TestActivity" containment="true" eOpposite="#//fragment/TestActivity/superActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superActivity" eType="#//fragment/TestActivity"
+          eOpposite="#//fragment/TestActivity/subActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
+          eType="#//fragment/TestArtifact" eOpposite="#//fragment/TestArtifact/outputFrom"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSubActivity"
+          upperBound="-1" eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/referencedSuperActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSuperActivity"
+          upperBound="-1" eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/referencedSubActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1"
+          eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/predecessor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" upperBound="-1"
+          eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/successor"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//fragment/ActivityType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testrole" upperBound="-1"
+          eType="#//fragment/TestRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="testtool" upperBound="-1"
+          eType="#//fragment/TestTool"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestRole" eSuperTypes="#//fragment/TestMethodFragment">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="cannotReferSystemMethodFragment"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="cannotReferSystemMethodFragment" value="self.relateSystemMethodFragments->isEmpty()"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestArtifact" eSuperTypes="#//fragment/TestMethodFragment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subArtifact" upperBound="-1"
+          eType="#//fragment/TestArtifact" containment="true" eOpposite="#//fragment/TestArtifact/superArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superArtifact" eType="#//fragment/TestArtifact"
+          eOpposite="#//fragment/TestArtifact/subArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputTo" upperBound="-1"
+          eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/input"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputFrom" upperBound="-1"
+          eType="#//fragment/TestActivity" eOpposite="#//fragment/TestActivity/output"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSubArtifact"
+          upperBound="-1" eType="#//fragment/TestArtifact" eOpposite="#//fragment/TestArtifact/referencedSuperArtifact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedSuperArtifact"
+          upperBound="-1" eType="#//fragment/TestArtifact" eOpposite="#//fragment/TestArtifact/referencedSubArtifact"/>
+    </eClassifiers>
+    <eSubpackages name="preparation_system" nsURI="http://de.upb.dbis.sme/xmiml/fragment/preparation_system"
+        nsPrefix="de.upb.dbis.sme.xmiml.fragment.preparation_system">
+      <eClassifiers xsi:type="ecore:EClass" name="Tool" eSuperTypes="#//fragment/SystemTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ToolDeveloper" eSuperTypes="#//fragment/SystemRole"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MetamodelDefinition" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MetamodelProfileDefinition" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ToolDefinition" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModelTransformationRulesDefinition"
+          eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeGenerationRulesDefinition" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationGuidanceSpecification"
+          eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Metamodel" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MetamodelProfile" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModelTransformationRules" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeGenerationRules" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ReimplementationGuidance" eSuperTypes="#//fragment/SystemArtifact"/>
+    </eSubpackages>
+    <eSubpackages name="transformation_system" nsURI="http://de.upb.dbis.sme/xmiml/fragment/transformation_system"
+        nsPrefix="de.upb.dbis.sme.xmiml.fragment.transformation_system">
+      <eClassifiers xsi:type="ecore:EClass" name="Reimplementation" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModelDiscovery" eSuperTypes="#//fragment/SystemActivity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="lpsmOutput"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="lpsmOutput" value="self.output->forAll(artifact | artifact.oclIsTypeOf(LPSM))"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ProgramComprehension" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Concretization" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeGeneration" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTransformation" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformIndependentArchitectureRecovery"
+          eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ArchitectureRestructuring" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LPSM" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TPSM" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LegacySourceCode" eSuperTypes="#//fragment/SystemArtifact">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="getsRemoved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TransformedSourceCode" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FPIM" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="APIM" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LPSMEnrichment" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Restructuring" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Platform" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//fragment/SystemArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SoftwareDeveloper" eSuperTypes="#//fragment/SystemRole"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemExpert" eSuperTypes="#//fragment/SystemRole"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformIndependentArchitectureConcretization"
+          eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModelTransformationEngine" eSuperTypes="#//fragment/SystemTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeGenerationEngine" eSuperTypes="#//fragment/SystemTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Parser" eSuperTypes="#//fragment/SystemTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FPIMEnrichment" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="APIMEnrichment" eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformDependentArchitectureRecovery"
+          eSuperTypes="#//fragment/SystemActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PlatformDependentArchitectureConcretization"
+          eSuperTypes="#//fragment/SystemActivity"/>
+    </eSubpackages>
+    <eSubpackages name="preparation_test" nsURI="http://de.upb.dbis.sme/xmiml/fragment/preparation_test"
+        nsPrefix="de.upb.dbis.sme.xmiml.fragment.preparation_test">
+      <eClassifiers xsi:type="ecore:EClass" name="TestTool" eSuperTypes="#//fragment/TestTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestToolDeveloper" eSuperTypes="#//fragment/TestRole"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestMetamodelDefinition" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestMetamodelProfileDefinition"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestToolDefinition" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestModelTransformationRulesDefinition"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCodeGenerationRulesDefinition"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestReimplementationGuidanceSpecification"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestMetamodel" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestMetamodelProfile" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestModelTransformationRules" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCodeGenerationRules" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestReimplementationGuidance" eSuperTypes="#//fragment/TestArtifact"/>
+    </eSubpackages>
+    <eSubpackages name="transformation_test" nsURI="http://de.upb.dbis.sme/xmiml/fragment/transformation_test"
+        nsPrefix="de.upb.dbis.sme.xmiml.fragment.transformation_test">
+      <eClassifiers xsi:type="ecore:EClass" name="TestReimplementation" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageBasedTestTransformation"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestLanguageBasedTestTransformation"
+          eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestModelDiscovery" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCaseUnderstanding" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestAbstraction" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestConcretization" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCodeGeneration" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemBehaviorRecovery" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="AbstractTestDerivation" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="OriginalTestCode" eSuperTypes="#//fragment/TestArtifact">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="getsRemoved" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MigratedTestCode" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MOTC" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MTTC" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MOET" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MTET" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MAT" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SBM" eSuperTypes="#//fragment/TestArtifact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MOETEnrichment" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MATEnrichment" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SBMEnrichment" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MATRestructuring" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SBMRestructuring" eSuperTypes="#//fragment/TestActivity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCaseParser" eSuperTypes="#//fragment/TestTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestCodeGenerationEngine" eSuperTypes="#//fragment/TestTool"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestArchitect" eSuperTypes="#//fragment/TestRole"/>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="core" nsURI="http://de.upb.dbis.sme/xmiml/core" nsPrefix="de.upb.dbis.sme.xmiml.core">
+    <eClassifiers xsi:type="ecore:EClass" name="XMimlElement" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trace" upperBound="-1"
+          eType="#//core/Trace" containment="true" eOpposite="#//core/Trace/xmimlelement"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XMimlNamedElement" abstract="true"
+        eSuperTypes="#//core/XMimlElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Trace">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="xmimlelement" eType="#//core/XMimlElement"
+          eOpposite="#//core/XMimlElement/trace"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="situation" nsURI="http://de.upb.dbis.sme/xmiml/situation" nsPrefix="de.upb.dbis.sme.xmiml.situation">
+    <eClassifiers xsi:type="ecore:EClass" name="SituationalContextModel" eSuperTypes="#//core/XMimlNamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conceptModel" upperBound="-1"
+          eType="#//situation/concept/ConceptModel" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="impactModel" upperBound="-1"
+          eType="#//situation/impact/ImpactModel" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="influenceFactorModel"
+          upperBound="-1" eType="#//situation/influence/InfluenceFactorModel" containment="true"/>
+    </eClassifiers>
+    <eSubpackages name="concept" nsURI="http://de.upb.dbis.sme/xmiml/situation/concept"
+        nsPrefix="de.upb.dbis.sme.xmiml.situation.concept">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore"/>
+      <eClassifiers xsi:type="ecore:EEnum" name="ConceptClass">
+        <eLiterals name="SharedConcept"/>
+        <eLiterals name="OriginalConcept" value="1"/>
+        <eLiterals name="TargetConcept" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="TestConceptClass">
+        <eLiterals name="SharedTestConcept"/>
+        <eLiterals name="OriginalTestConcept" value="1"/>
+        <eLiterals name="TargetTestConcept" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConceptModel" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+            eType="#//situation/concept/Concern" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Concern" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concepts" upperBound="-1"
+            eType="#//situation/concept/Concept" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+            eType="#//situation/concept/Concern" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Concept" abstract="true" eSuperTypes="#//core/XMimlNamedElement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemConcept" abstract="true" eSuperTypes="#//core/XMimlNamedElement #//situation/concept/Concept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="maxOneLanguageTransformation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="maxOneLanguageTransformation" value="self.suitableMethodPattern->select(pattern | pattern.type = situation::influence::MethodPatternType::LanguageTransformation)->size() &lt;= 1"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" upperBound="-1"
+            eType="#//situation/concept/SystemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isA" eType="#//situation/concept/SystemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="conceptClass" eType="#//situation/concept/ConceptClass"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="suitableMethodPattern"
+            upperBound="-1" eType="#//situation/influence/MethodPatternAlternative"
+            containment="true" eOpposite="#//situation/influence/MethodPatternAlternative/systemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="appliedMethodPattern"
+            eType="#//situation/influence/AppliedMethodPattern" containment="true"
+            eOpposite="#//situation/influence/AppliedMethodPattern/systemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correspondsTo" eType="#//situation/concept/SystemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="correspondenceRelation"
+            eType="#//situation/impact/CorrespondenceType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageConcept" eSuperTypes="#//situation/concept/SystemConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(LanguageConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AbstractConcept" abstract="true"
+          eSuperTypes="#//situation/concept/SystemConcept"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ProgrammingConcept" eSuperTypes="#//situation/concept/AbstractConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(ProgrammingConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ArchitecturalConcept" eSuperTypes="#//situation/concept/AbstractConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(ArchitecturalConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TestConcept" abstract="true" eSuperTypes="#//core/XMimlNamedElement #//situation/concept/Concept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="maxOneLanguageTestTransformation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="maxOneLanguageTestTransformation" value="self.suitableTestMethodPattern->select(pattern | pattern.type = situation::influence::TestMethodPatternType::LanguageBasedTestTransformation)->size() &lt;= 1"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" upperBound="-1"
+            eType="#//situation/concept/TestConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isA" eType="#//situation/concept/TestConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="testConceptClass" eType="#//situation/concept/TestConceptClass"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="suitableTestMethodPattern"
+            upperBound="-1" eType="#//situation/influence/TestMethodPatternAlternative"
+            containment="true" eOpposite="#//situation/influence/TestMethodPatternAlternative/testConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="appliedTestMethodPattern"
+            eType="#//situation/influence/AppliedTestMethodPattern" containment="true"
+            eOpposite="#//situation/influence/AppliedTestMethodPattern/testConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" eType="#//situation/concept/SystemConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correspondsTo" eType="#//situation/concept/TestConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="correspondenceRelation"
+            eType="#//situation/impact/CorrespondenceType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LanguageTestConcept" eSuperTypes="#//situation/concept/TestConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(LanguageTestConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AbstractTestConcept" abstract="true"
+          eSuperTypes="#//situation/concept/TestConcept"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ProgrammingTestConcept" eSuperTypes="#//situation/concept/AbstractTestConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(ProgrammingTestConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ArchitecturalTestConcept" eSuperTypes="#//situation/concept/AbstractTestConcept">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="isARelation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="isARelation" value="self.isA->isEmpty() or self.isA.oclIsTypeOf(ArchitecturalTestConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="impact" nsURI="http://de.upb.dbis.sme/xmiml/situation/impact"
+        nsPrefix="de.upb.dbis.sme.xmiml.situation.impact">
+      <eClassifiers xsi:type="ecore:EClass" name="Trace" abstract="true" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" upperBound="-1"
+            eType="#//situation/impact/Concept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1"
+            eType="#//situation/impact/Concept"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ImpactModel" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="impact" upperBound="-1"
+            eType="#//situation/impact/Trace" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CorrespondsTo" eSuperTypes="#//situation/impact/Trace #//core/XMimlNamedElement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="sourceTargetConstraint"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="sourceTargetConstraint" value="(self.source.oclIsTypeOf(SystemConcept) and self.target.oclIsTypeOf(SystemConcept)) or (self.source.oclIsTypeOf(TestConcept) and self.target.oclIsTypeOf(TestConcept))"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="correspondenceRelation"
+            eType="#//situation/impact/CorrespondenceType" defaultValueLiteral="NotDefined"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DependsOn" eSuperTypes="#//core/XMimlNamedElement #//situation/impact/Trace">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="sourceTargetConstraint"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="sourceTargetConstraint" value="self.source.oclIsTypeOf(TestConcept) and self.target.oclIsTypeOf(SystemConcept)"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="CorrespondenceType">
+        <eLiterals name="NotDefined"/>
+        <eLiterals name="Language" value="1"/>
+        <eLiterals name="Database" value="2"/>
+        <eLiterals name="UserInterface" value="3"/>
+        <eLiterals name="Architectural" value="4"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Concept" abstract="true" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="concept" eType="#//situation/concept/Concept"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TestConcept" eSuperTypes="#//core/XMimlNamedElement #//situation/impact/Concept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testConcept" eType="#//situation/concept/TestConcept"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemConcept" eSuperTypes="#//core/XMimlNamedElement #//situation/impact/Concept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="systemConcept" eType="#//situation/concept/SystemConcept"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="influence" nsURI="http://de.upb.dbis.sme/xmiml/situation/influence"
+        nsPrefix="de.upb.dbis.sme.xmiml.situation.influence">
+      <eClassifiers xsi:type="ecore:EEnum" name="MethodPatternType">
+        <eLiterals name="LanguageTransformation"/>
+        <eLiterals name="ConceptualTransformation" value="1"/>
+        <eLiterals name="Reimplementation" value="2"/>
+        <eLiterals name="CodeRemoval" value="3"/>
+        <eLiterals name="PlatformDependentArchitectureRestructuring" value="4"/>
+        <eLiterals name="PlatformIndependentArchitectureRestructuring" value="5"/>
+        <eLiterals name="LanguageTransformationBasedReimplementation" value="6"/>
+        <eLiterals name="ConceptRecognitionBasedReimplementation" value="7"/>
+        <eLiterals name="ConceptRecognitionBasedLanguageTransformation" value="8"/>
+        <eLiterals name="ConceptRecognitionAndLanguageTransformationBasedReimplementation"
+            value="9"/>
+        <eLiterals name="ArchitectureRestructuring" value="10"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="TestMethodPatternType">
+        <eLiterals name="LanguageBasedTestTransformation"/>
+        <eLiterals name="ConceptualTestTransformation" value="1"/>
+        <eLiterals name="TestReimplementation" value="2"/>
+        <eLiterals name="TestCodeRemoval" value="3"/>
+        <eLiterals name="TestLanguageBasedTestTransformation" value="4"/>
+        <eLiterals name="PlatformDependentTestArchitectureTransformation" value="5"/>
+        <eLiterals name="PlatformIndependentTestArchitectureTransformation" value="6"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InfluenceFactorModel" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="influenceFactor" upperBound="-1"
+            eType="#//situation/influence/InfluenceFactor" containment="true" eOpposite="#//situation/influence/InfluenceFactor/influenceFactorModel"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InfluenceFactor" abstract="true"
+          eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="influenceFactorModel"
+            eType="#//situation/influence/InfluenceFactorModel" eOpposite="#//situation/influence/InfluenceFactorModel/influenceFactor"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SystemInfluenceFactor" abstract="true"
+          eSuperTypes="#//core/XMimlNamedElement #//situation/influence/InfluenceFactor">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="implication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="methodPatternAlternative"
+            upperBound="-1" eType="#//situation/influence/MethodPatternAlternative"
+            eOpposite="#//situation/influence/MethodPatternAlternative/systemInfluenceFactor"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="OriginalSystemInfluenceFactor" eSuperTypes="#//situation/influence/SystemInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TargetSystemInfluenceFactor" eSuperTypes="#//situation/influence/SystemInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="OrganizationalInfluenceFactor" eSuperTypes="#//situation/influence/SystemInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ToolingInfluenceFactor" eSuperTypes="#//situation/influence/SystemInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MethodPatternAlternative" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="pros" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cons" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//situation/influence/MethodPatternType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="systemConcept" eType="#//situation/concept/SystemConcept"
+            eOpposite="#//situation/concept/SystemConcept/suitableMethodPattern"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="chosen" eType="#//situation/influence/AppliedMethodPattern"
+            eOpposite="#//situation/influence/AppliedMethodPattern/chosen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="systemInfluenceFactor"
+            upperBound="-1" eType="#//situation/influence/SystemInfluenceFactor" eOpposite="#//situation/influence/SystemInfluenceFactor/methodPatternAlternative"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AppliedMethodPattern" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="systemConcept" eType="#//situation/concept/SystemConcept"
+            eOpposite="#//situation/concept/SystemConcept/appliedMethodPattern"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="chosen" eType="#//situation/influence/MethodPatternAlternative"
+            eOpposite="#//situation/influence/MethodPatternAlternative/chosen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="instantiatedMethodPattern"
+            eType="#//pattern/SystemMethodPattern" eOpposite="#//pattern/SystemMethodPattern/appliedMethodPattern"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TestInfluenceFactor" abstract="true"
+          eSuperTypes="#//core/XMimlNamedElement #//situation/influence/InfluenceFactor">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="implication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testMethodPatternAlternative"
+            upperBound="-1" eType="#//situation/influence/TestMethodPatternAlternative"
+            eOpposite="#//situation/influence/TestMethodPatternAlternative/testInfluenceFactor"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="OriginalTestInfluenceFactor" eSuperTypes="#//situation/influence/TestInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TargetTestInfluenceFactor" eSuperTypes="#//situation/influence/TestInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="OrganizationalTestInfluenceFactor"
+          eSuperTypes="#//situation/influence/TestInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ToolingTestInfluenceFactor" eSuperTypes="#//situation/influence/TestInfluenceFactor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TestMethodPatternAlternative" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="pros" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cons" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//situation/influence/TestMethodPatternType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testConcept" eType="#//situation/concept/TestConcept"
+            eOpposite="#//situation/concept/TestConcept/suitableTestMethodPattern"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="chosen" eType="#//situation/influence/AppliedTestMethodPattern"
+            eOpposite="#//situation/influence/AppliedTestMethodPattern/chosen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testInfluenceFactor"
+            upperBound="-1" eType="#//situation/influence/TestInfluenceFactor" eOpposite="#//situation/influence/TestInfluenceFactor/testMethodPatternAlternative"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AppliedTestMethodPattern" eSuperTypes="#//core/XMimlNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testConcept" eType="#//situation/concept/TestConcept"
+            eOpposite="#//situation/concept/TestConcept/appliedTestMethodPattern"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="chosen" eType="#//situation/influence/TestMethodPatternAlternative"
+            eOpposite="#//situation/influence/TestMethodPatternAlternative/chosen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="instantiatedTestMethodPattern"
+            eType="#//pattern/TestMethodPattern" eOpposite="#//pattern/TestMethodPattern/appliedTestMethodPattern"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CoevolutionInfluenceFactor" eSuperTypes="#//situation/influence/TestInfluenceFactor"/>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>
